@@ -1,0 +1,125 @@
+\documentclass{beamer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Les packages :
+\usetheme{Warsaw}
+\beamertemplateshadingbackground{red!10}{blue!10}
+\usepackage[english]{babel} 
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{amsmath,amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp,lmodern}
+\usepackage{colortbl}
+\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{natbib}
+% \usepackage{media9}
+\usepackage{algorithm2e}
+\usepackage{multicol}
+\columnseprule 0.4pt\raggedcolumns
+\usepackage{multirow}
+% \usepackage{animate}
+\usepackage{tikz}
+% \usepackage{multimedia}
+\usepackage[natbibapa]{apacite}
+\usetikzlibrary{arrows}
+\usepackage{pgfpages}
+\setbeamertemplate{note page}[plain]
+
+%\setbeameroption{show notes}
+%\setbeameroption{show only notes}
+%\setbeameroption{hide notes}
+
+
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[a4paper,border shrink=5mm]
+
+\beamertemplatetransparentcovereddynamic
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% La page de garde :
+
+	\title{Fuzzy Reasoning for Multimedia Semantic Interpretation}
+	\subtitle{Fuzzy Ontology Based Model for Video Indexing}
+	\author	[\insertframenumber/\inserttotalframenumber \hspace{30mm}  Mohamed Zarka]
+		{\textbf{Mohamed Zarka} \\ ~ \\ ~ \\
+		{\footnotesize \textit{Advisors:}  \textbf{Prof. Adel M. Alimi} \textit{and} \textbf{Dr. Anis Ben Ammar}}}
+	\institute{
+		Ph.D. Defense in candidacy for the degree of Doctor of \\ the National Engineering School of Sfax}
+	\date{\tiny November $16^{th}$, 2016}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+    	\begin{frame}[plain]
+		\begin{tikzpicture}[remember picture,overlay]
+    			\node[xshift=-1.5cm,yshift=-7.5cm] at (current page.north east) 
+			{\includegraphics[scale=0.07]{graphics/title/enis.pdf}};
+		\end{tikzpicture}
+		\begin{tikzpicture}[remember picture,overlay]
+    			\node[xshift=1.5cm,yshift=-7.5cm] at (current page.north west) 
+			{\includegraphics[scale=0.08]{graphics/title/regim.pdf}};
+		\end{tikzpicture}
+      		\titlepage
+      	\end{frame}
+
+	\begin{frame}[plain]
+  		\frametitle{Outline}
+		\setcounter{tocdepth}{1}
+		\tableofcontents%[pausesections]
+	\end{frame}
+
+	\AtBeginSection[]
+	{
+		\begin{frame}<beamer>
+			\frametitle{Outline}
+			\tableofcontents[currentsection]
+		\end{frame}
+	}
+
+	\section{Introduction}
+
+		\include{parties/introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\section{Literature Review}
+		\include{parties/review}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\section{Contributions}
+		\subsection{Contributions Overview}
+		\include{parties/contributions}
+		\subsection[$C_{1}$ Fuzzy knowledge-based Framework for Video Indexing]
+				{$C_{1}$ Fuzzy knowledge-based framework for multimedia indexing}
+			\include{parties/c1}
+		\subsection[$C_{2}$ Fuzzy reasoning framework to improve semantic video Indexing]
+				{$C_{2}$ Fuzzy reasoning framework to improve semantic video Indexing}
+			\include{parties/c2}
+		\subsection[$C_{3}$ Scalable Ontology-Driven Approach for Concept Detector]
+				{$C_{3}$ Scalable ontology-driven Approach to Construct Hierarchical Semantic Concept Detectors}
+			\include{parties/c3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\section{Conclusions and Future Research Directions}
+		\subsection{Conclusions}
+		\include{parties/conclusions}
+			
+		\subsection{Future Research Directions}
+		\include{parties/future_works}
+			
+
+		\begin{frame}[allowframebreaks]
+			\renewcommand*{\bibfont}{\tiny}
+			\frametitle{Publications}
+				\bibliographystyle{apalike}
+    				\bibliography{bibliography/mybib2}
+			\end{frame}
+			
+
+	\begin{frame}[plain]
+  		\begin{center}\begin{huge}\textbf{\alert{Thank you for your attention}}\end{huge}\end{center}
+	\end{frame}
+
+
+\end{document}

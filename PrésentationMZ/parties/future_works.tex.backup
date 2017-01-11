@@ -1,0 +1,19 @@
+\begin{frame}
+	\frametitle{Future Research Directions}
+	
+	\begin{alertblock}{}
+		\begin{itemize}
+		\item The \textbf{ontology evolution} and \textbf{domain adaptation} should be more tackled 
+ 		{\tiny{\citep{Hoffman2014,Liu2016}}},
+		
+		\item \textbf{Video genre} could refine further the managed knowledge, 
+		and then the semantic capabilities
+ 		{\tiny{\citep{Wu2012, Huang2012, Chattopadhyay2013, Muneesawang2014}}},
+		
+		\item \textbf{Deep Neural Networks} for more \alert{accuracy} and \alert{scalability}
+		{\tiny{\citep{Wu2015,Druzhkov2016}}},
+		
+		\item \textbf{Semantic Deep Learning} for extracting and managin valuable knwoledge
+		\end{itemize}
+	\end{alertblock}
+\end{frame}

@@ -1,0 +1,582 @@
+\chapter{Temp}
+
+		\subsection{Ontologies in Indexing Process}
+		In the last fifteen years, ontologies have been emerged from an interesting conceptualization paradigm 
+		to a very promising modeling technology for multimedia retrieval. Ontologies enable meaning driven 
+		retrieval process through a machine-understandable form of a content description. 
+		In the following, we enumerate some multimedia ontologies outlining main characteristics.
+		
+		First ontologies for multimedia retrieval associate low-level and high-level information about a multimedia content, 
+		in order to abstract semantic characteristics in a bottom-up manner and to explore them in the retrieval process. 
+		These ontologies contains inter-conceptual and spatial information regarding the included low-level and high-level 
+		features. Thus, these earlier ontologies were based on MPEG-7 standard and allowed to model formally its descriptions 
+		(structure, localization, low-level and high-level features) in order to export them into the \emph{Web Ontology Language} 
+		(OWL) \citep{Staab2009} and to avail of reasoning capabilities.
+		
+		The \emph{Harmony} ontology \citep{Hunter2001}, the \emph{aceMedia} ontology \citep{ Petridis2004} and the 
+		\emph{Rhizomik} \citep{Garcia2005}  ontology are first initiatives to attach formal semantic to MPEG-7. 
+		These ontologies have been explored to support semantic image /video analysis and annotation, addressing 
+		many content domains, including pancreatic cell images  (for \emph{Hamony}),  soccer video 
+		(for \emph{Rhizomik}), \dots.  More recent MPEG-7 based ontologies, like \emph{SmartWeb} 
+		\citep{Oberle2007}, \emph{DS-MIRF} \citep{Tsinaraki2007}, \emph{COMM} \citep{Arndt2007} and 
+		\emph{Boemie} \citep{Dasiopoulou2009}, focused on a fully translation/mapping of the complete 
+		MPEG-7 specification into \emph{OWL}. These ontologies were mostly used in analyzing and annotating 
+		sport oriented multimedia contents.
+		
+		In their majority, enumerated ontologies have been constructed manually, and their knowledge structures are
+		rather focused on low-level and high-level features (as classes), and their spatial-temporal relationships
+		for particular content domains. Thus, these approaches are limited to provide a formalism that allow to use 
+		ontologies as repositories for storing knowledge. So, there is no correspondence between the expressive power
+		provided by the adopted representation language, and the constructed ontology definitions. 
+		That is, the ontologies were not fully exploited for multimedia retrieval.
+		
+		The key issue in enhancing multimedia retrieval is to focus to inherent semantics in addition to extracted 
+		ones through exploring reasoning and deduction capabilities of ontologies. Indeed, and contrary to the 
+		aforementioned ontologies, recent ontologies are addressing issues related to actual research works handling 
+		semantic contexts and concept co-occurrence. 
+		
+		As discussed above, the \textsc{LsCom} ontology \citep{Naphade2006} is often considered as  a concept taxonomy. 
+		In fact, this ontology is manually defined (through a series of scientific workshops)  and depicts the generalization 
+		relationship between concept (for instance, the concept \emph{George Bush} \textbf{\textit{is a}} \emph{Political Person}).
+		
+		In \citep{Mylonas2008,Mylonas2009}, the authors investigate concept detection through an integrated approach 
+		of visual thesaurus analysis and visual context. The latter deals with a proposed ontology that specifies 
+		fuzzy semantic relations among concepts/contexts \emph{Location}, \emph{Property}, \emph{Part}, \emph{Similar}, 
+		\dots{}. Moreover, this ontology handle a semantic classification of a multimedia content following a fuzzy 
+		hierarchical classification technique.
+		
+		In \citep{Elleuch2011}, the authors proposed an approach for enhancing semantic
+		concept detection by exploiting contextual information about concepts from visual modality. 
+		An ontology structure is introduced by extending the \textsc{LsCom} ontology with new formal 
+		knowledge model based on fuzzy rules and fuzzy relationships among contexts and semantic concepts.: 
+		\emph{isPartOf}, \emph{Includes} and \emph{isRelatedTo}. A deduction engine is also defined based 
+		on fuzzy rules for richer results in video indexing efficiency.
+		
+		In \cite{Bannour2013}, the authors proposed a method for building a fuzzy multimedia ontology for image annotation. 
+		The built ontology consists in conceptual, contextual and spatial knowledge about a image (including relationships 
+		like \emph{isAnnotatedBy}, \emph{hasAppearedLeftOf}, \emph{hasAppearedCloseTo}, \dots{}). The authors proposed 
+		also reasoning framework in order to check about the consistency of the annotation efficiency.
+
+
+
+	\label{issues}
+
+\section{An Overview of Knowledge-based Approaches for Video Semantic indexing}
+	\label{eval}
+	
+	Multimedia interpretation is considered as a challenging problem and it engaged string research interest. 
+	The multimedia interpretation refers to the semantic gap problem: the noncompliance between the
+	automated descriptions extracted from the multimedia content, and the human interpretation for the 
+	same content \citep{Smeulders2000}.
+	
+	A multimedia document may convey a valuable information ranging from structural and signal level descriptions, 
+	to thematic descriptions related to scenes, objects and events. 
+
+	In order to access to large amount of video content, an index that interpret a video content 
+	is request. An index can be considered as a key dimension for approaches and systems that handle 
+	digital multimedia data storing and filtering in order to help a user to identify relevant contents 
+	based on his needs. In such a situation, the index must be as complete as possible in order to cover 
+	all the available information in the content. Two possible ways to build an index for a given content. 
+	The first way  constructs indexes by experts who access to the content, and then label it with some 
+	key words (name also \textit{semantic concepts}). The second way constructs indexes through
+	an automatic content analysis. When handling a large amount of video content, the second way is 
+	more suitable for such a situation.
+
+
+	The multimodal and fuzzy fusion has recently been developed through many works. In what follows, 
+	we enumerate the main existing works and systems. Thus, the data fusion model will be presented, 
+	then relevant indexing systems related to the fusion technique will be enumerated and discussed, 
+	and finally semantic enrichement techniques will be discussed.
+
+	The fusion process consists of five levels \citep{Waltz1990a,Esteban2005a,Guerrero2009a}. 
+	In \citep{Blasch2006a}, these levels are illustrated as: while level 0 (\emph{pre-processing}) 
+	and level 1 (\emph{object refinement}) cover respectively signal processing and data alignment, 
+	the level 2 (\emph{situation refinement}) attempts to construct a picture from incomplete 
+	information provided by the level 1. The level 3 (\emph{threat refinement}) interprets the 
+	results from level 2 in terms of the possible opportunities for operation. A process refinement, 
+	referred to level 4, loops around these earlier levels to monitor performance and optimize the fusion process.
+
+	Earlier data fusion applications were initially used for military reasons. But currently,  data fusion   
+	model is extended for several other areas \citep{Liggins2008}. In what follows, we enumerate some semantic 
+	video content-based indexing systems based on data fusion.
+
+	%\section{Relevant indexing systems}
+	The earlier fusion indexing systems \citep{Adams2002,Amir2003,Hauptmann2003} considered the fusion process as 
+	a simple task of aggregating some semantic interpretations. 
+	This aggregation consists of merging these different interpretations in a single container. 
+	In current systems \citep{Snoek2006,Kosmopoulos2006,Ayache2007a,Ayache2007b,Athanasiadis2009,Vrochidis2010}, 
+	fusion is used not only for aggregation, but also for improving 
+	the quality of the semantic interpretations.
+
+
+		%%BOEMIE
+			In \citep{Karkaletsis2005,Kosmopoulos2006a}, the \emph{BOEMIE} framework is developed to index videos 
+			dealing with athletic events.
+			Once mid-level (unimodal) concepts found, reasoning engines, such as
+			deduction and abduction, complement the video analysis by inferring the existence of high-level concepts. 
+			In the core of \emph{BOEMIE} framework, an ontology is used for fusing and interpreting
+			systematically multimedia analysis results. 
+			Within such a way, \emph{BOEMIE} incorporates the majority of data fusion model. 
+			Initially, data (called mid-level concepts) are extracted from multiple modalities: level 0. 
+			Then, a reasoning system based on deduction and abduction is called to seek for new mid-level 
+			concepts or new concepts: the level 1 and 2. Finally, a component that controls the fusion process when 
+			an unknown information is detected, 
+			and is launched to ask a human expert to specify the missing information and defined in the used ontology: level 4.
+
+		%%PathFinder and MediaMill
+		In \citep{Snoek2006}, \emph{Semantic pathfinder} is introduced as an architecture for generic indexing of multimedia 
+		archives. This system extracts semantic concepts from video by exploring textual and visual 
+		modalities. These unimodal concepts are then fused by the use of a supervised \emph{SVM} classifier 
+		(considered as level 2 in data fusion model).
+
+		In \citep{Snoek2005a}, Snoek proved that the fusion process can be decomposed into two sub-processes: early 
+		fusion and late fusion. In early fusion, the indexing task consists at first in extracting
+		features from each modality, then in combining extracted features into a single multimodal representation (vectors).
+		In late fusion, these multimodal representations are classified in order to extract semantic informations.
+		We can consider that  the early fusion is the level 1 of the data fusion model, and the late fusion is the second level.
+		Snoek proved that the use of the early and late fusion can give results much bette that a simple fusion process.
+
+		%% Le réseau d'opérateurs
+		In \citep{Ayache2007c,Ayache2007b}, the \emph{networks of operators} define how to merge a set of semantic information 
+		(named \textit{numcepts}) extracted from 
+		many modalities in order to detect some other numcepts or, finally and as an output, 
+		some concepts. The fusion system consists in crossing  a number of steps, each step gets as input a number of numcepts, 
+		and then produces a small increase in the abstraction level of handled semantic interpretation. 
+		Thus, concepts are computed through the use of networks of operators based on new numcepts.
+		We note that the proposed indexing system is limited to level 2 (situation refinement) using
+		a deduction engine. Indeed, this work aims at identifying new concepts from other concepts using rules modelled 
+		by a network of operators. On the other hand, this system does not propose to treat the initial set of concepts 
+		to identify eventual conflicting or inconsistency situations.
+
+		%% K-space
+		In \citep{Athanasiadis2009}, the \emph{K-Space} framework consists in applying two different semantic 
+		indexing techniques on shots, and then fusing the results 
+		using a fuzzy reasoning engine. The first technique uses an \emph{SVM} based classification, while the second 
+		technique uses neural network based on clustering and classification.
+		We note that the indexing system included only two components of the data fusion model: the extraction 
+		of data from the visual modality (level 0), and a semantic information enrichment (level 2).
+
+		As part of the \emph{K-Space} framework, \emph{FIRE} \citep{Simou2007,Simou2008} is a fuzzy logic engine 
+		dealing with imprecise semantic interpretations. After extracting features from visual modalit, 
+		\emph{FIRE} is used for the refinement of 
+		mistakenly classification task and also for the extraction of rich implicit knowledge used for global image classification.
+		\emph{FIRE} employs \textit{Description Logic}(as knowlodge database) for modeling and storing semantic interpretations.
+
+		%%Verge
+			In \citep{Vrochidis2010}, \emph{Verge} is an interactive video retrieval system. Its indexing process 
+			uses a fusion system that combines visual and textual concepts. The fusion process computes
+			concept relevance value using fixed modality weights. Thus, \emph{Verge} system defines only 
+			level 0 and level 1 of the data fusion model.
+
+	%\section{Context-based fuzzy ontology for semantic enrichement}
+
+
+	Though the concept detectors approach for semantic video indexing provides satisfactory performance 	
+	for some concepts, most semantic concepts still not easily detected. Thus, the typical concept detector 
+	approach alone is not efficient for multimedia processing, especially video indexing. In fact, the major 
+	drawback of this approach is the choice of machine learning and its parameters. Moreover, another 
+	drawback of this approach is that the concept detectors are often developed independently, ignoring 
+	the fact that concepts always coexist together and the training samples are naturally multi-labeled. 
+	Therefore, much new research has involved 		the exploration of semantic knowledge among concepts 
+	for video indexing. Particularly, they aim to develop a context-based concept fusion (CBCF) framework
+	to enhance the concept detection results \citep{Jiang2009,Smith2003}. These approaches fall into two categories.
+	
+	\begin{description}
+		\item[The first category] is based on exploration of pairwise concept correlation 
+		\citep{Jiang2009,Wei2009,Zha2007} that is generally determined on observation
+		(e.g., from manual annotations or machine tagging of training data set). 
+		In \cite{Zha2007}, the concurrent matrix generates an explicit model based on
+		the concurrent relation to refine the annotations. In \citep{Jiang2009}, the \emph{Domain 
+		Adaptive Semantic Diffusion} (DASD) exploits the semantic context (concept relationship) 
+		to refine concept detection scores via a function level graph diffusion process. The semantic 
+		context is modeled in an undirected and weighted concept graph, which is then used to recover 
+		the consistency and smoothness of video indexing results.
+
+		Based on the statistical principles and the manual annotation so as to approximate pairwise
+		concept relations, these previous approaches suffer from two major drawbacks. First, 
+		such approximations may not be generally consistent when we have limited training data. 
+		Furthermore, it is difficult to obtain accurate statistics involving different generic concepts 
+		in general videos collection. Therefore, the relationship to other concepts is generally ignored. 
+		Second, the manual annotation methods for labeling of the semantic concepts are most often 
+		incomplete. Thus, such missing information's can lead to inaccurate approximations and to 
+		misleading statistics.
+	
+		\item[The second category] is based on learning techniques \citep{Jiang2006, Kennedy2007, Smith2003}. 
+		In \citep{Smith2003}, the contextual relationship is modeled by \emph{SVM}.
+		Firstly, the \emph{Discriminative Model Fusion} (DMF) method generates a model vector 
+		aggregating the detection score of all the individual detectors. 
+		After that, \emph{SVM} is trained in order to refine the detection of the original concepts.
+		
+		In \citep{Jiang2006}, an active CBCF method is proposed by extending the DMF model so as to 
+		incorporate active labeling from a user. Firstly, users are solicited to annotate a small 
+		number of samples. After that, a context-based  \emph{SVM} classifier is learnt.
+
+		In \citep{Kennedy2007}, a set of 75 related concepts are firstly discovered through measuring 
+		the mutual information between their detection scores and pseudo-labels. 
+		Then, a \emph{SVM} is trained to reorder and refine the initial detection result. 
+
+	\end{description}
+	
+	
+	%\section{Discussion}
+	As a conclusion, we consider that combining visual, textual, and audiotary features or 
+		concepts is one of the key issues for bridging the gap between signal and semantics. The framework \emph{REGIMVID}
+		already integrates a toolbox for extracting features and concepts from different modalities. 
+		However, this framework does not fuse these unimodal concepts in order to produce a more richer semantic interpretation. 
+		Accordingly, the future fusion system will adopt the data fusion \emph{JDL/DFS} model. 
+		We have particularly focused on these levels: 1, 3 and 4.
+ 
+		Moreover, we note that fuzzy logic is undeveloped in most of actual video indexing system despite its capabilities 
+		to provide a semantic interpretation rather close to the human one. In fact, most of these systems 
+		still adopt the boolean logic model: a feature can exist or not exist in a given video. 
+		As discussed in \citep{Bordogna1995} and \citep{Stoilos2006}, the authors have shown the importance and necessity of
+		the involvement of the uncertainty in information retrieval systems, including indexing process.
+		
+		Furthermore, in \cite{Zadeh2005} Zadeh pointed out that fuzzy logic will be, sooner or later, used largely in 
+		the improvement of performance of search engines.
+		And it's only in recent years that researchers get involved in the use of fuzzy logic in the design of video indexing systems. 
+		For instance, \emph{BOEMIE} researchers are recently interested in integrating the fuzzy reasoning engine \emph{FIRE} in order to improve the multimodal fusion task.
+
+		In another hand, All semantic enrichment approaches employ a two-layer learning structure, which uses the individual detector scores 
+		of the first layer as an input feature vectors for training detectors in the second layer in order to refine detector scores by modeling the proximity 			relation among concepts. Although performance improvement reported in \cite{cite5,cite7}, there are major drawbacks. 
+		First, these approaches are fully supervised and require explicit knowledge of the target semantic concept and ground-truth 
+		labels such as the ontology hierarchy  \cite{cite8} and the Bayesian networks (manually constructed in most cases)
+		\cite{cite9}. Second, the number ofcorrelated concepts for a given concept is generally	small, compared to the un-correlated ones; 
+		thus using all the concepts as in \cite{cite7} will significantly affect the performance. Third, some detectors may provide inaccurate
+		probability estimation, especially for the concepts with very few positive training samples. Thus, such detectors will have a significantly detrimental
+		impact on the learning relation.
+
+		In this outline, we intend to propose a fuzzy multimodal fusion system to enhance the capabilities of the
+		\emph{REGIMVID} framework in terms of the quality of video indexing. 
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+\section{Knowledge reasoning for the Multimedia Retrieval}
+
+	Earlier research in multimedia feature extraction focused mainly on the visual modality and involved 
+	frame-based and object-based approaches \citep{Puri2000,Deb2004,Snoek2005}. Frame-based approaches 
+	deal with low-level features (such as histograms, colors, textures, motion, \dots{}) in order to detect 
+	a shot or to query by example \citep{Brunelli1999,Antani2002,Kang2003,Smith2003}. These approaches became 
+	standard procedures and were easy to compute, however,  they were not suitable to detect fine-grained semantics 
+	in a multimedia resource. Thus, frame-based features were not able to get detailed semantic interpretation 
+	but basically macro-grained (particularly for detecting the subject of a multimedia resource like sports, 
+	news, \dots{}).
+
+	Object-based approaches were proposed in order to overcome low-level based features limits for 
+	the description of a multimedia content and to fill the gap between  perceptual properties and semantic 
+	meaning of a multimedia content. In fact, object-based approaches deal with low-level features for 
+	an individual region instead of the whole content. This means that object-based approaches are suitable 
+	to detect high-level features like \emph{``table''}, \emph{``chair''}, \emph{``car''}, \emph{``person''}, 
+	\dots{} \citep{Snoek2006,Lew2006,Spyrou2008}. Many models have been proposed to identify semantic concepts 
+	in images \citep{Jurie2005,Yang2007,Wang2010,Elleuch2011a} and audio \citep{You2010,Feki2011,Rawat2013}. 
+	However, all these models faced one fundamental question : What semantic concepts
+	should these models focus on and deal with ?
+
+	In order to promote researches on multimedia analysis and to deliver a common set of semantic concepts, 
+	the \textit{Moving Pictures Expert Group} (MPEG) proposed the MPEG-7 \citep{Salembier2002} standard for 
+	describing a multimedia content. The aim of MPEG-7 is to address a wide variety of media types and to 
+	describe audiovisual information through providing a rich set of standardized tools that generate and 
+	understand audiovisual features. Hence, the MPEG-7 standard defined more than 140 semantic concept that 
+	can describe  a multimedia content.
+
+	However, as thoroughly elaborated in \citep{Naphade2006}, some  practical obstacles have hindered the 
+	emerging research works and efforts in the multimedia content analysis field, and the MPEG-7 received 
+	a weak attention from multimedia research community. Firstly, many semantic concepts defined in MPEG-7 
+	were not suitable for an automated detection. For an example, it was very hard to multimedia content 
+	analyzers to  discover a semantic concept like \emph{``remarkable people''} (defined in MPEG-7). 
+	Secondly, most of multimedia retrieval approaches were based on statistical machine-learning techniques 
+	\citep{Deb2004}. These latter use annotated datasets to build models and classifiers. However, 
+	datasets (and particularly training ones) were insufficient and non standardized to 
+	promote researches on multimedia semantics.
+
+	To address these two issues, and to supply a large annotated multimedia datasets that support 
+	a common set of semantic concepts, the \textsc{LsCom} ontology (for \textit{Large Scale Concept 
+	Ontology for Multimedia}) was proposed \citep{Kennedy2006,Naphade2006}. At first, a set of 1000 
+	semantic concepts were defined and 80 hours of broadcast news video were manually annotated aiming 
+	at providing a valuable resource for the multimedia research community. Actually, \textsc{LsCom} 
+	provides more than 2500 concepts. Many concept detection researches began to be used successfully 
+	by exploring the  \textsc{LsCom} ontology: \textit{VIREO-374} \citep{Jiang2007, Jiang2010} and 
+	\textit{Columbia374} \citep{Yanagawa2007} are able to detect up to 374 semantic concepts in a
+	visual content, and \textit{Mediamill101} \citep{Snoek2006} is able to detect up to 101 
+	semantic concepts. \textsc{LsCom} is used also as the basis of many video annotation tools 
+	\citep{Garnaud2006,Worring2006,Ksentini2012}.
+
+	Evaluation campaigns have played a significant role for the progress in semantic concept 
+	detection within a multimedia content. The evaluation campaign \textsc{TrecVid} 
+	\citep{Smeaton2009, Over2013} has played the most significant role \citep{Snoek2010} 
+	by exploring the \textsc{LsCom} ontology resources. \textsc{TrecVid} aims to benchmark 
+	search engines and to promote the content-based retrieval via open metrics-based evaluation.
+
+	As outlined in \citep{Snoek2010,Over2013}, experiments in \textsc{TrecVid} have led to conclude 
+	that available semantic concept detection approaches can not be generalized to any semantic concept. 
+	Indeed, these approaches focus on identifying  objects in a content without dealing with implicit 
+	information: concepts co-occurrence and the context in which an object is defined.
+
+	\begin{description}
+		\item[\textit{\textbf{Concepts co-occurrence}}]
+		Earlier object detection approaches considered that a detector is modeled for 
+		a single semantic concept. It also means that for detecting a set of semantic concepts 
+		in a content, a set of detector are taken into consideration simultaneously. Nevertheless,
+		a semantic relationship between this set of concepts could be explored. Thus, authors in  
+		\citep{Naphide2001} displayed a probabilistic model to explore inter-concept relationships. 
+		Many other works \citep{Feng2012,Ksentini2012, Zheng2013} (to cite a few) followed this promising
+		track by computing similarities between detected concepts from an annotated multimedia dataset 
+		(a training dataset). As an example, when the semantic concepts \emph{``sand''} and 
+		\emph{``sky''} are detected in a content with a certain probability, a chance to consider 
+		that the concept \emph{``desert''} is present should be increased (even if this concept was
+		not detected), and a chance to consider that the concept \emph{``Penguin''} is present 
+		should be decreased. Therefor, the co-occurrence of concepts is taking a serious consideration 
+		in multimedia retrieval community.
+
+		\item[\textit{\textbf{Contexts}}]
+		In general, a multimedia content interpretation is an outcome of a defined context in 
+		which contained semantic objects are defined \citep{Dumitrescu2009}. Therefore, the 
+		\emph{``context''} appeared as a great opportunity to contribute to multimedia analysis 
+		enhancement \citep{Elgesem2007,Jiang2009,Fauzi2014}. Many context-based multimedia retrieval
+		systems used the context approach with an informal definition 
+		\citep{Cioara2009, Nguyen2010, Parsons2009,Elleuch2011,PerpetualCoutinho2012}: In fact,
+		contexts are defined manually by authors. Consequently, these approaches are based on manual 
+		list of contexts to consider and a set of semantic concepts that are defined under each context.
+	\end{description}
+
+	Summarizing, context based approaches and semantic co-occurrence exploration  are capturing the attention 
+	of the multimedia retrieval community and are being considered as promising research trend toward better 
+	semantic interpretation capabilities for multimedia contents. Yet, such new approaches deal with more than 
+	a set of semantic concepts to interpret a multimedia content; knowledge management (like ontology) are being 
+	used in order to handle concepts, contexts and their relationships. A variety of papers expose different models
+	for developing and managing ontologies \citep{Fernandez-Lopez1999,Noy2001,Gargouri2010}. Commonly, 
+	ontology modeling consists in defining some steps in order to represent the main tasks to build ontologies 
+	starting from an existing knowledge source. The most important steps are: (1) the ontology structure, (2) 
+	the ontology population, (3) the reasoning processand (4) and the ontology evolution. In what follows, 
+	we discuss an overview of the different research works on ontology content management for a multimedia semantic analysis. 
+
+\section{Knwoledge based approaches}
+
+	In the last fifteen years, ontologies have been emerged from an interesting conceptualization paradigm to a very promising 		modeling technology for multimedia retrieval. Ontologies enable meaning driven retrieval process through a 
+	machine-understandable form of a content description. In the following, we enumerate some multimedia ontologies outlining main 		characteristics.
+
+	First ontologies for multimedia retrieval associate low-level and high-level information about a multimedia content, 
+	in order to abstract semantic characteristics in a bottom-up manner and to explore them in the retrieval process. 
+	These ontologies contains inter-conceptual and spatial information regarding the included low-level and high-level 
+	features. Thus, these earlier ontologies were based on MPEG-7 standard and allowed to model formally its descriptions
+	(structure, localization, low-level and high-level features) in order to export them into the \emph{Web Ontology Language} 
+	(OWL) \citep{Staab2009} and to avail of reasoning capabilities.
+
+	The \emph{Harmony} ontology \citep{Hunter2001}, the \emph{aceMedia} ontology \citep{Petridis2004} and the 
+	\emph{Rhizomik} \citep{Garcia2005}  ontology are first initiatives to attach formal semantic to MPEG-7. 
+	These ontologies have been explored to support semantic image /video analysis and annotation, addressing 
+	many content domains, including pancreatic cell images  (for \emph{Hamony}),  soccer video (for 
+	\emph{Rhizomik}), \dots.  More recent MPEG-7 based ontologies, like \emph{SmartWeb} \citep{Oberle2007},
+	\emph{DS-MIRF} \citep{Tsinaraki2007}, \emph{COMM} \citep{Arndt2007} and \emph{Boemie} \citep{Dasiopoulou2009}, 
+	focused on a fully translation/mapping of the complete MPEG-7 specification into \emph{OWL}. These ontologies 
+	were mostly used in analyzing and annotating sport oriented multimedia contents.
+
+	In their majority, enumerated ontologies have been constructed manually, and their knowledge structures 
+	are rather focused on low-level and high-level features (as classes), and their spatial-temporal relationships 
+	for particular content domains. Thus, these approaches are limited to provide a formalism that allow
+	to use ontologies as repositories for storing knowledge. So, there is no correspondence between the 
+	expressive power provided by the adopted representation language, and the constructed ontology 
+	definitions. That is, the ontologies were not fully exploited for multimedia retrieval.
+
+	The key issue in enhancing multimedia retrieval is to focus to inherent semantics in addition to extracted
+	ones through exploring reasoning and deduction capabilities of ontologies. Indeed, and contrary to 
+	the aforementioned ontologies, recent ontologies are addressing issues related to actual research 
+	works handling semantic contexts and concept co-occurrence. 
+
+	As discussed above, the \textsc{LsCom} ontology \citep{Naphade2006} is often considered as a concept 
+	taxonomy. In fact, this ontology is manually defined (through a series of scientific workshops)
+	and depicts the generalization relationship between concept (for instance, the concept 
+	\emph{George Bush} \textbf{\textit{is a}} \emph{Political Person}).
+
+	In \citep{Mylonas2008,Mylonas2009}, the authors investigate concept detection through an integrated
+	approach of visual thesaurus analysis and visual context. The latter deals with a proposed ontology
+	that specifies fuzzy semantic relations among concepts/contexts \emph{Location}, \emph{Property},
+	\emph{Part}, \emph{Similar}, \dots{}. Moreover, this ontology handle a semantic classification of
+	a multimedia content following a fuzzy hierarchical classification technique.
+
+	In \citep{Elleuch2011}, the authors proposed an approach for enhancing semantic concept detection
+	by exploiting contextual information about concepts from visual modality. An ontology structure is
+	introduced by extending the \textsc{LsCom} ontology with new formal knowledge model based on fuzzy
+	rules and fuzzy relationships among contexts and semantic concepts.: \emph{isPartOf}, \emph{Includes}
+	and \emph{isRelatedTo}. A deduction engine is also defined based on fuzzy rules for richer results
+	in video indexing efficiency.
+
+	In \citep{Bannour2013}, the authors proposed a method for building a fuzzy multimedia ontology
+	for image annotation. The built ontology consists in conceptual, contextual and spatial
+	knowledge about a image (including relationships like \emph{isAnnotatedBy}, \emph{hasAppearedLeftOf},
+	\emph{hasAppearedCloseTo}, \dots{}). The authors proposed also reasoning framework in order to check
+	about the consistency of the annotation efficiency.
+
+\section{Handling multimedia semantics within an ontology}
+	Earlier information retrieval approaches used low-level document analysis. Such approaches have shown 
+	their ability in terms of retrieval performance, but are still unable to bridge the semantic gap. This 
+	limitations relies on the inability of these earlier approaches to capture all the semantics in a 
+	content. The main hypothesis of the new trend is that the involvement of knowledge can contribute to
+	overcome the semantic gap problem. 
+
+	Exploring the ontology has a number of challenges due to some information retrieval specificities. 
+	Indeed, classical information retrieval systems were based on keywords to index or to retrieve handled 
+	documents. But these keywords were not able to handle 
+	a complex knowledge about a document. Thus, recent retrieval approaches are using the ontologies 
+	in order to discover further semantic knowledge in analyzed documents and give more precise retrieval results. 
+
+	The ontologies are considered of a great importance in understanding a user request \citep{Fu2005,Wu2008,Zhai2012}. 
+	In such a case, the ontology is used to better identify and enrich keywords in the request. 
+
+	Other research works focused on improving the indexing efficiency through the use of the ontologies capabilities. 
+	Indeed, in \citep{Leite2008,Cheng2012,Mukesh2013}, the authors propose an ontology based framework in order to 
+	enhance a semantic interpretation. Theses works mainly focused on defining how  to manage knowledge in an 
+	ontology (concept and relationships). 	
+
+	Other retrieval aspects were dealt : in \citep{Rodriguez-Garcia2012}, the authors detailed how to evolve 
+	the ontology content using the \textsc{DBpedia} as an external data source. Also, in \citep{Mustafa2008}, 
+	the authors  refined the semantic level by analyzing contexts and concepts interrelationships in a 
+	particular context.
+
+	Mainly, the ontologies drew the attention of many researchers in the multimedia retrieval. 
+	In this dissertation, we are particularly interested in the indexing process. As discussed at the 
+	start of the present chapter, this process has evolved from low-level indexing \citep{Adami2001,OConnor2005}, 
+	to concept-based indexing \cite{Elleuch2010b,Egozi2011}, and finally to knowledge based indexing 
+	\citep{Zarka2011,Elleuch2011,Kumar2012}.
+	
+
+	In what follows, we discuss an overview of the different research works on ontology content management 
+	and the use of knowledge databases to enhance the indexing effectiveness. 
+	%\subsection{Ontology Modeling}
+		Many research papers describe different models for developing and managing ontologies 
+		\citep{Sure1999,Fernandez-Lopez1999,Noy2001,Vrandecic2005,Li2007}.	
+
+		Mainly, ontology modeling consists of specifying some steps in order to represent 
+		the main tasks to build ontologies starting from an existing knowledge source. 
+		The common important steps are: 
+
+		\begin{description} 
+			\item[\textbf{\textit{Ontology structure}}] The ontology structure aims to 
+			orgenize knowledge by defining concepts and their interrelationships.  
+			\emph{OWL} ( the \emph{Web Ontology Language}) is a standard used for 
+			modeling and exchanging ontologies and is designed to support the 
+			\emph{Semantic Web} \citep{Staab2009}. \emph{OWL} is based on  the 
+			\emph{Description Logics} (\emph{DL}) \citep{Baader2003}. \emph{OWL} ontologies 
+			are categorized into three types depending on their expressive level: from \emph{OWL-Lite}, 
+			then \emph{OWL-DL},  to finally \emph{OWL-Full}. These three expression levels differ 
+			in their complexity and may be used depending on required inference simplicity or formality of descriptions. 
+
+			\item[\textbf{\textit{Ontology Population}}] Ontology Population is the process of knowledge 
+			acquisition through analyzing and transforming unstructured, semi-structured and/or structured valuable
+			source data into ontology instances. Such a process aims to identify instances of concepts and 
+			interrelationships of an ontology. Manual population by a domain expert is a costly and time consuming
+			task, then, automatic/semi-automatic approaches are considered  \citep{Song2009, Faria2011}.	 
+
+			\item[\textbf{\textit{Inference and Rules}}] Rules could be considered as an implication between 
+			an antecedent (\emph{body}) and a consequent (\emph{head}). When combining ontologies and 
+			rules for domain conceptualization and inference modeling, ontologies can enhance and 
+			enrich the amount of knowledge that it can represent. 
+		
+			\item[\textbf{\textit{Ontology Evolution}}] The knowledge within an ontology has to evolve 
+			continuously throughout its life cycle in order to be able to answer different change 
+			requirements. The Ontology evolution consists in growing the background knowledge in order 
+			to better enhance its semantic abilities. This evolution process consists in updating and 
+			validating concepts and semantic relationships \citep{Gargouri2010,Paliouras2011b,Petasis2011}. 			Current ontology evolution works give more attention to the way to evolve the ontology content: 
+			from fully automatic to fully manual.
+		 \end{description} 	 
+ 
+		Thus,  ontologies are powerful tools to model concepts and their interrelationships. 
+		Many research fields have focused on ontologies for knowledge management. 
+		More particularly, information retrieval systems use ontologies in order 
+		to enhance a machine ability to understand  the document semantic contents. 
+		Nevertheless, the very specific nature of these systems requires to
+		handle ontologies with specific considerations.
+	
+		The ontology use in indexing process consists in defining and managing its content in order to 
+		be able to represent, to handle and to enhance a semantic interpretation. Main contributions 
+		handle the ontology content structure and the way to populate and evolve its content. However, 
+		defining and building large-scale information retrieval systems require facing a number of 
+		interesting challenges \citep{Dean2009} : (1) handling large scale document database, 
+		(2) the quality and the cost of indexing algorithms, and finally (3), the generated semantic description quality.
+
+		Afterwards, the scalability should be considered in modeling ontologies, particularly, for the ontology
+		structure effectiveness and reasoning computational cost. While in \citep{Paliouras2011,Bannour2013}
+		the ontology structure is defined by a highly expressive language, a more simple structure and less 
+		expressive language is used in \citep{lscom2006,Vallet2007,Mylonas2008,Mylonas2009,Fellbaum2010,Elleuch2011}. 
+
+		Within these ontology structures, many semantic relationships between concepts were defined : \emph{is-a} 
+		and \emph{has-part} in \textsc{WordNet} \citep{Fellbaum2010}, \emph{is-a} in \textsc{LsCom} 
+		\citep{lscom2006}, \emph{IsPartOf}, \emph{Includes} and \emph{Generalization} and \emph{IsRelatedTo} 
+		in \citep{Elleuch2011}, \emph{Location}, \emph{Property}, \emph{Part}, \emph{Similar}, 
+		\dots in \citep{Mylonas2008,Mylonas2009}. 
+
+		Expressive language level is tweaked by paying attention to the huge amount of computational tasks 
+		needed for video interpretation. In fact, a simple ontology structure could be a good accommodation 
+		between a video analysis speed and performance. Once the structure is defined, the ontology is 
+		then populated by new knowledge. The process of population can be provided by experts or can be fully automatic.
+			
+		In \citep{KARA2010,Sari2010,Bannour2013}, the authors propose a manually defined ontology content to handle 
+		knowledge.  But other works have focused on how to manage knowledge, with less human aid. In fact, 
+		in video annotation systems. In \citep{Volkmer2005, Ayache2007}), the annotator (a user) 
+		chooses tags for a given video shot. The annotation results could then be used as data source 
+		for populating ontologies. Then, the availability of various annotated multimedia datasets 
+		(like \emph{ImageCLEF} \citep{Thomee2012} and \emph{TrecVid} \citep{Smeaton2006}) could offer valuable
+		information that can be used to extract knowledge. In \citep{Elleuch2011}, the proposed 
+		framework automatically extracts knowledge from annotated video datasets based on an abduction engine. 
+
+		The availability of large-scale video annotated datasets constitutes a crucial requirement 
+		for promoting knowledge discovery. Many annotation tools were provided \citep{Dasiopoulou2011}
+		(such as \emph{VIA}, \emph{VideoAnnEx}, \emph{Ontolog}, \emph{Advene}, \emph{Elan}, \emph{Anvil},
+		 \dots). These tools investigate spatial-temporal information in a video content. However,
+		no standardized large-scale annotated video dataset was officially proposed. Particularly, 
+		\textsc{TrecVid} \cite{Over2013} proposed a standardized annotated video dataset used for
+		measuring video retrieval and indexing performances. 
+
+		The annotation process in \textsc{TrecVid} \cite{Ayache2008} consists only in verifying 
+		if a semantic concept exists or not in a key frame. This leds to lose many of spatial-temporal 
+		information within a video in favor of the amount of annotated content. 
+
+		The ontology use in the indexing process should also address issues related to actual 
+		research works dealing with the indexing process. Indeed, the use of \emph{context} 
+		and handling  the uncertain aspect of a semantic interpretation of video contents are also substantial. 
+
+		At first, a \emph{context} is considered as the key importance in a wide variety of fields, 
+		particularly in the information retrieval one. Various definitions of context were given, 
+		from surrounding objects within an image, to a particular event that depicts a shot. 
+		Thus, the context is an abstract meaning that cannot be well defined because it can be 
+		meaningful only in a particular situation. 
+
+	
+
+
+
+\section{Discussion}
+	Recent research works are focusing on using ontologies for multimedia retrieval in order to
+	allow semantic interpretation and reasoning over extracted descriptions. However, much remains to 
+	be done in order to achieve less human aid ontology modeling approaches. Firstly, almost all existing 
+	approaches for modeling ontologies still relying on manual knowledge population (knowledge defined by
+	experts) and there is non explicit method proposed for an automated ontology population. Such manual
+	approaches are always costly, not always relevant and incomplete. Furthermore, using various relationship
+	between concept/context has lead to diversify the semantic capabilities of an ontology (as proved by
+	aforementioned approaches), but it reduces their capacities to cover more multimedia content domains. We
+	suppose that the generic aspect of an ontology strongly depends to its ability to model any semantic
+	relationship between concepts/contexts. 
+
+	Finally, the context of a content could provide a important cue
+	for enhancing a semantic interpretation \citep{Fauzi2014}.  Yet, the definition of a context remains
+	unclear and there is no computational method to define it. Contexts are defined manually in all works
+	listed above. We consider that a computational definition of a context is a crucial step for an automated
+	ontology construction.
+
+	Through answering many of aforementioned limitations, our approach goes further than the previously
+	stated works. Specifically, we proposed in this paper a framework for an automated fuzzy ontology
+	construction as a knowledge database that enhances a semantic interpretation about a multimedia content.
+	To make the knowledge structure able to model any relationships between concepts/contexts, a generic structure
+	is proposed. In addition, many available data sources, such as video/image annotated databases, search
+	engines API like \emph{Flickr API} and \emph{Picasa API}, are accessible and can be analyzed in order
+	to extract valuable knowledge about semantic concepts/contexts and their relationships. Our approach
+	aims at gathering valuable knowledge from such data resources in an automatic manner.

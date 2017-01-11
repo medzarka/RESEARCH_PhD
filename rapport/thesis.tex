@@ -1,0 +1,168 @@
+\documentclass[a4paper,11pt,onecolumn,oneside]{regimthese}
+\usepackage{algorithm2e}
+\usepackage{supertabular}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{color}
+\usepackage{soul}
+\usepackage{amsthm}
+\usepackage{natbib}
+
+\usepackage[left=3cm,right=2.5cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{incgraph,tikz}
+\usepackage{algorithm2e}
+\usepackage{supertabular}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsthm}
+\usepackage{caption}
+\usepackage{subcaption}
+%\usepackage{titlesec}
+\usepackage{array}
+\usepackage[normalem]{ulem}
+
+
+% ======================================================= %
+\newcounter{commentNum}
+\setcounter{commentNum}{0}
+%\newtheorem{mydef}{Definition}
+% ======================================================= %
+% macros
+\newcommand{\question}[1]{\addtocounter{commentNum}{1}\vspace{1em}\noindent
+\hangindent=0em \textbf{\textcolor{Maroon}{\uline{Comment
+\arabic{commentNum}}:~}}{\sffamily{#1}}}
+\newcommand{\answer}[0]{\vspace{0.1em} \hangindent=2.3em \textbf{\textcolor{NavyBlue}{\uline{Answer \arabic{commentNum}:~}}}}
+\definecolor{darkred}{rgb}{1,.6,.6}
+\DeclareRobustCommand\problemline{\bgroup\markoverwith{\textcolor{darkred}{\rule[-0.9ex]{4pt}{3pt}}}\ULon}
+\DeclareRobustCommand{\problem}[1]{\problemline{#1}} % soul
+%\setcounter{secnumdepth}{-1}
+\renewcommand {\theenumi}{\roman{enumi}}
+\newcommand{\newlen}[0]{TODO}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+\definecolor{brightgreen}{rgb}{0.4, 1.0, 0.0}
+\definecolor{darkorange}{rgb}{1.0, 0.55, 0.0}
+\definecolor{pinkpearl}{rgb}{0.91, 0.67, 0.81}
+\soulregister\citep7
+
+%#####  Anglais
+%\newcommand{\revAnglais}[1]{\sethlcolor{yellow}{\hl{#1}}}
+\newcommand{\revAnglais}[1]{#1}
+%#####  Faiz
+%\newcommand{\revFaiz}[1]{\sethlcolor{green}{\hl{#1}}}
+\newcommand{\revFaiz}[1]{#1}
+%#####  Karray
+\newcommand{\revKarray}[1]{#1}
+%\newcommand{\revKarray}[1]{\sethlcolor{babyblue}{\hl{#1}}}
+
+
+
+%\renewcommand{\cftpartfont}{\large \bfseries}  
+%\renewcommand{\cftchapfont}{\scshape}                          %Bold chapterentries
+%\renewcommand{\cftsecfont}{}                           %Typewriter sectionentries
+%\renewcommand{\cftsubsecfont}{\itshape}
+%\renewcommand{\cftpartpresnum}{\hrule ~\\  \textbf{Part} }
+
+
+%\ChTitleVar{\Huge\scshape}
+ 
+%\urlstyle{same}
+\newtheorem{mydef}{Definition}
+
+\Auteur{Mohamed}{Zarka}{Mastère en informatique}
+\President{Prof.}{Chokri \textsc{Ben Amar}}{University of Sfax, Tunisia}{Professeur} 	
+\Membres{1}{Prof.}{Slim \textsc{Kanoun}}{University of Sfax, Tunisia}{Professeur}	
+\Membres{2}{Prof.}{Fakhreddine \textsc{Karray}}{University of Waterloo, Canada}{Professeur}	
+\Membres{3}{Prof.}{Sami \textsc{Faiz}}{University of Manouba, Tunisia}{Professeur}		
+\Membres{4}{Prof.}{Adel M. \textsc{Alimi}}{University of Sfax, Tunisia}{Professeur}
+\Membres{5}{Dr.}{Anis \textsc{Ben Ammar}}{University of Sfax, Tunisia}{Ph.D.}		
+
+\PhD{Fuzzy Reasoning for Multimedia Semantic Interpretation: 
+	\\Fuzzy Ontology Based Model for Video Indexing} 	
+	{...............}			
+	{Ingénierie des Systèmes Informatiques}
+	{informatique}
+	{01}
+	{Janvier}
+	{2014}
+%\ThesisDraft 
+\newtheorem{definition}{Definition}
+\bibpunct{[}{]}{,}{a}{}{;}
+
+\begin{document}
+	\dominitoc
+	\selectlanguage{english}	
+	\PagesCouverture
+	%\newpage ~
+	\newpage \pagestyle{empty} ~
+	\frontmatter{}
+	
+	\tablefancy
+	
+	\include{heads/abstract}
+	\include{heads/dedicaces}
+	\include{heads/remerciments}
+
+	\newpage ~
+
+	\lestables		% une commande pour créer la table de matières et la table de figures
+	\include{heads/Abbreviations}
+	%\printglossaries
+
+	\mainmatter{}	% commencer la numérotation arabe des pages
+	%\introductionfancy
+	\regimfancy
+			\include{contents/introduction}
+	\regimfancy
+	\part{Video Indexing: Background and Trends}
+			\include{contents/state1}
+			\include{contents/state2}
+	\part{Fuzzy Ontology Based Framework for Video Indexing}
+			\include{contents/contrib1}
+			\include{contents/contrib2}
+			\include{contents/contrib3}
+			
+	\part{Conclusions and Future Research Directions}
+			\include{contents/conclusion}
+\appendix
+
+%\chapter{Annex A}
+
+%\chapter{Annex B}
+
+
+
+%-------------------------------------------------------------------
+%              L'index
+%-------------------------------------------------------------------
+
+% à ajouter
+
+%-------------------------------------------------------------------
+%                       La bibliographie
+%-------------------------------------------------------------------
+
+% La bibliographie 
+\setstretch{1.3}
+\bibliographyfancy
+\bibliography{bibliography/mybib2}
+
+%%%\newpage ~
+\newpage \pagestyle{empty} ~
+
+%\include{reponse/reponses}
+
+%\newpage ~
+\newpage \pagestyle{empty} ~
+
+\incgraph[documentpaper,
+  overlay={\node[red] at (page.center) {};}]
+  [width=\paperwidth,height=\paperheight]{resumes/RESUMES.jpg}
+
+%\newpage \pagestyle{empty} ~
+%\includepdf[pages=1]{resumes/RESUMES.pdf}
+
+\end{document}

@@ -1,0 +1,120 @@
+\documentclass[a4paper,12pt,onecolumn,oneside]{regimthese}
+\usepackage{algorithm2e}
+\usepackage{supertabular}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{color}
+\usepackage{amsthm}
+\usepackage{natbib}
+
+\usepackage[left=3cm,right=2.5cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{algorithm2e}
+\usepackage{supertabular}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsthm}
+\usepackage{caption}
+\usepackage{subcaption}
+%\usepackage{titlesec}
+\usepackage{array}
+
+
+
+%\renewcommand{\cftpartfont}{\large \bfseries}  
+%\renewcommand{\cftchapfont}{\scshape}                          %Bold chapterentries
+%\renewcommand{\cftsecfont}{}                           %Typewriter sectionentries
+%\renewcommand{\cftsubsecfont}{\itshape}
+%\renewcommand{\cftpartpresnum}{\hrule ~\\  \textbf{Part} }
+
+
+%\ChTitleVar{\Huge\scshape}
+ 
+%\urlstyle{same}
+\newtheorem{mydef}{Definition}
+
+\Auteur{Mohamed}{Zarka}{Mastère en informatique}
+\President{Prof.}{...........}{..............}{Professeur} 	
+\Membres{1}{Prof.}{...........}{..............}{Professeur}	
+\Membres{2}{Prof.}{Fakhreddine }{\textsc{Karray}}{Professeur}	
+\Membres{3}{Prof.}{Sami}{\textsc{Faiz}}{Professeur}		
+\Membres{4}{Prof.}{Adel M.}{\textsc{Alimi}}{Professeur}
+\Membres{5}{Dr.}{Anis}{\textsc{Ben Ammar}}{Ph.D.}		
+
+\PhD{Fuzzy Reasoning for Multimedia Semantic Interpretation: 
+	\\Fuzzy Ontology Based Model for Video Indexing} 	
+	{...............}			
+	{Ingénierie des Systèmes Informatiques}
+	{informatique}
+	{01}
+	{Janvier}
+	{2014}
+%\ThesisDraft 
+\newtheorem{definition}{Definition}
+\bibpunct{[}{]}{,}{a}{}{;}
+
+\begin{document}
+	\dominitoc
+	\selectlanguage{english}	
+	\PagesCouverture
+	\frontmatter{}
+	
+	\tablefancy
+	
+	\include{heads/abstract}
+	\include{heads/dedicaces}
+	\include{heads/remerciments}
+
+	\newpage ~
+
+	\lestables		% une commande pour créer la table de matières et la table de figures
+	\include{heads/Abbreviations}
+	%\printglossaries
+\setstretch{2}
+	\mainmatter{}	% commencer la numérotation arabe des pages
+	%\introductionfancy
+	\regimfancy
+			\include{contents/introduction}
+	\regimfancy
+	\part{Video Indexing: Background and Trends}
+			\include{contents/state1}
+			\include{contents/state2}
+	\part{Fuzzy Ontology Based Framework for Video Indexing}
+			\include{contents/contrib1}
+			\include{contents/contrib2}
+			\include{contents/contrib3}
+			
+	\part{Conclusions and Future Research Directions}
+			\include{contents/conclusion}
+\appendix
+
+%\chapter{Annex A}
+
+%\chapter{Annex B}
+
+
+
+%-------------------------------------------------------------------
+%              L'index
+%-------------------------------------------------------------------
+
+% à ajouter
+
+%-------------------------------------------------------------------
+%                       La bibliographie
+%-------------------------------------------------------------------
+
+% La bibliographie 
+\setstretch{1}
+\bibliographyfancy
+\bibliography{bibliography/mybib2}
+
+
+
+%\newpage ~
+\newpage \pagestyle{empty} ~
+
+\includepdf[pages=1]{resumes/RESUMES.pdf}
+\end{document}

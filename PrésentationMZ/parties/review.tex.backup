@@ -1,0 +1,121 @@
+\subsection{Knowledge-based approaches for multimedia indexing}
+\begin{frame}
+	\frametitle{Knowledge-based approaches for multimedia indexing I}
+	\begin{itemize}
+		\item \textbf{Knowledge-based approaches}
+		\begin{itemize}
+			\item Dealing with semantic \alert{concepts co-occurrence} 
+			      \\ {\tiny{\citep{Feng2012, Zheng2013}}}
+			\item Dealing with semantic \alert{contexts} 
+			      \\ {\tiny{\citep{Dumitrescu2009,PerpetualCoutinho2012}}}
+		\end{itemize}
+		\item \textbf{knowledge management} (like ontology) are being used in order to handle knowledge  
+			about \alert{semantic concepts}, \alert{contexts} and their \alert{relationships}:
+			{\tiny{\citep{Noy2001}}}
+			\begin{itemize}
+				\item knowledge semantic structure
+				\item knowledge mining and population (\alert{abduction})
+				\item knowledge inferring (\alert{deduction})
+				\item knowledge evolving
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Knowledge-based approaches for multimedia indexing II}
+	
+		\begin{itemize}
+			\item \textbf{Related Works}
+				\begin{itemize}
+					\item \alert{Lightweight Ontologies}: modeled as direct graphs in which nodes  
+					represent semantic concepts {\tiny{\citep{Fan2008,Li2010,Reimer2012}}} (\textsc{LsCom} 
+					{\tiny{\citep{Kennedy2006}}})
+					
+					\item \alert{Formal Ontologies}: based on \textbf{description language} 
+					\\{\tiny{\citep{Mylonas2009,Simou2008,Bannour2014}}}
+							\pause
+						\begin{itemize}
+						
+							\item $\mathcal{T}$ (TBox) a set of \textit{concept axioms} 
+										and \textit{role axioms}
+		
+								\alert{\textit{ex.}} \textbf{Object} and \textbf{Multimedia Content}
+								are two ontological concepts under $\mathcal{T}$,
+								
+								\textbf{\textit{isIndexedBy}(Multimedia Content,Object)} a role that 
+								denotes a particular relationship.
+							%\pause
+							\item $\mathcal{A}$ (ABox) a set of \textit{assertional axioms}
+								\\ \alert{\textit{ex.}} \textbf{\textit{isIndexedBy}(Video.mp4, Airplane)}
+						\end{itemize}
+				\end{itemize}
+		\end{itemize}
+		\pause
+		\begin{alertblock}{}
+			\alert{The abduction is still manual: contexts and concept inter-relationships are 
+				defined by experts}
+		\end{alertblock}
+\end{frame}
+
+% \begin{frame}
+% 	\frametitle{Knwoledge-based approaches for multimedia indexing III}
+% 		\textbf{Related Works}
+% 		\begin{itemize}
+% 			\item \textbf{Light ontologies}
+% % % 				\begin{itemize}
+% 					\item \textsc{LsCom}
+% 				\end{itemize}
+% 			\item \textbf{Formal ontologies}
+% 				\begin{itemize}
+% 					\item \citep{Mylonas2009}: Semantic concept thesaurus and semantic contexts
+% 					\item \citep{Simou2008}: Spatial relations and neighborhood 
+% 						information are managed within an ontology
+% 					\item \citep{Bannour2014}: a framework for building and using 
+% 						structured knowledge models for visual content analysis and annotation
+% 				\end{itemize}
+% 		\end{itemize}
+% 		
+% \end{frame}
+
+\subsection{Uncertain Knowledge Management}
+\begin{frame}
+	\frametitle{Uncertain Knowledge Management}
+		\begin{itemize}
+			\item \alert{Fuzzy logic} deals with vagueness and imprecision using fuzzy predicates
+			\item \textbf{Fuzzy-DLs} {\tiny{\citep{Straccia2006,Stoilos2007}}}
+			
+			\pause
+			\begin{itemize}
+			  \item $\mathcal{T}$ (TBox) set defines \alert{fuzzy modifiers} {\tiny{\citep{Bobillo2011}}}
+
+			  \alert{\textit{ex.}} {\small \textbf{\textit{isIndexedBy}(Multimedia Content, Object).right(0.4,0.6) }}
+			
+% 			  \pause
+			  \item $\mathcal{A}$ (ABox) set could handles fuzzy assertional axioms
+			
+			  \alert{\textit{ex.}} \textbf{\textit{isIndexedBy}(Video.mp4, Airplane) $\geq 0.9$ }
+			\end{itemize}
+		\end{itemize}
+		\pause
+		\begin{alertblock}{}
+			\alert{The fuzzy-DL formalisms face the undecidable reasoning issue \\ {\tiny{\citep{Baader2011}}}}
+		\end{alertblock}
+\end{frame}
+\subsection{Multimedia Retrieval Scalability}
+\begin{frame}
+	\frametitle{Multimedia Retrieval Scalability}
+		How do the multimedia analysis efficiently process the growing amount of data and how to 
+		define scalable approaches that could meet user requirement?
+		\begin{itemize}
+			\item \alert{Cloud/distributed}: 
+			      \emph{Multi-Threaded Processing} {\tiny{\citep{Amit2006}}},  
+			      \emph{Hadoop} {\tiny{\citep{White2012,Landset2015}}}, 
+			      \emph{MapReduce} {\tiny{\citep{Dean2008,Dean2010}}}, \dots{},
+		
+			\item \alert{Deep Neural Networks}: are used for multimedia scalability issue 
+			{\tiny{\citep{Wu2015,Druzhkov2016}}}
+			
+			\item \alert{Semantic hierarchies} in order to reduce indexing computing cost
+			    {\tiny{\citep{Deng2010,Zhou2014,Ordonez2015}}}
+		\end{itemize}
+\end{frame}

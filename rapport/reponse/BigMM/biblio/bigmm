@@ -1,0 +1,144 @@
+% This file was created with JabRef 2.10.
+% Encoding: UTF-8
+
+
+@Article{Arnaldo2015,
+  Title                    = {Bring Your Own Learner: {A} Cloud-Based, Data-Parallel Commons for Machine Learning},
+  Author                   = {Ignacio Arnaldo and
+ Kalyan Veeramachaneni and
+ Andrew Song and
+ Una{-}May O'Reilly},
+  Journal                  = {{IEEE} Comp. Int. Mag.},
+  Year                     = {2015},
+  Number                   = {1},
+  Pages                    = {20--32},
+  Volume                   = {10}
+}
+
+@Article{Druzhkov2016,
+  Title                    = {A survey of deep learning methods and software tools for image classification and object detection},
+  Author                   = {Druzhkov, P. N.
+and Kustikova, V. D.},
+  Journal                  = {Pattern Recognition and Image Analysis},
+  Year                     = {2016},
+  Number                   = {1},
+  Pages                    = {9--15},
+  Volume                   = {26},
+
+  Abstract                 = {Deep learning methods for image classification and object detection are overviewed. In particular we consider such deep models as autoencoders, restricted Boltzmann machines and convolutional neural networks. Existing software packages for deep learning problems are compared.},
+  Doi                      = {10.1134/S1054661816010065},
+  ISSN                     = {1555-6212},
+  Url                      = {http://dx.doi.org/10.1134/S1054661816010065}
+}
+
+@InProceedings{Girshick2014,
+  Title                    = {Rich feature hierarchies for accurate object detection and semantic segmentation},
+  Author                   = {Girshick, Ross and Donahue, Jeff and Darrell, Trevor and Malik, Jitendra},
+  Booktitle                = {Proceedings of the IEEE conference on computer vision and pattern recognition},
+  Year                     = {2014},
+  Pages                    = {580--587}
+}
+
+@Article{Guzek2015,
+  Title                    = {A Survey of Evolutionary Computation for Resource Management of Processing in Cloud Computing [Review Article]},
+  Author                   = {M. Guzek and P. Bouvry and E. G. Talbi},
+  Journal                  = {IEEE Computational Intelligence Magazine},
+  Year                     = {2015},
+
+  Month                    = {May},
+  Number                   = {2},
+  Pages                    = {53-67},
+  Volume                   = {10},
+
+  Abstract                 = {Cloud computing is significantly reshaping the computing industry. Individuals and small organizations can benefit from using state-of-the-art services and infrastructure, while large companies are attracted by the flexibility and the speed with which they can obtain the services. Service providers compete to offer the most attractive conditions at the lowest prices. However, the environmental impact and legal aspects of cloud solutions pose additional challenges. Indeed, the new cloud-related techniques for resource virtualization and sharing and the corresponding service level agreements call for new optimization models and solutions. It is important for computational intelligence researchers to understand the novelties introduced by cloud computing. The current survey highlights and classifies key research questions, the current state of the art, and open problems.},
+  Doi                      = {10.1109/MCI.2015.2405351},
+  ISSN                     = {1556-603X},
+  Keywords                 = {cloud computing;contracts;evolutionary computation;cloud computing;cloud-related technique;computing industry;evolutionary computation;optimization model;resource management;resource virtualization;service level agreements;Cloud computing;Industries;Resource management;Resource virtualization;Strategic planning}
+}
+
+@Article{Jiang2016,
+  Title                    = {A Novel GPU-Based Efficient Approach for Convolutional Neural Networks with Small Filters},
+  Author                   = {Jiang, Wenbin
+and Chen, Yiming
+and Jin, Hai
+and Zheng, Ran
+and Chi, Ye},
+  Journal                  = {Journal of Signal Processing Systems},
+  Year                     = {2016},
+  Pages                    = {1--13},
+
+  Abstract                 = {In recent years, convolutional neural networks (CNNs) as important parts of deep neural networks (DNNs) have achieved great successes in the field of computer vision. However, Convolution always takes much computation time in the DNNs. In order to improve the efficiency of CNNs, many solutions focusing on training algorithms and parallelism strategies have been proposed. In this paper, different from traditional GPU-based algorithms, a novel algorithm based on look-up table is proposed to speed up the CNNs with small filters by applying GPU. By transforming complex matrix multiplications operations in the convolution computation to some table-based simple summation operations, the overhead of convolution computation can be considerably reduced. The process of creating a table and looking up values in the table is very appropriate for parallelization on a GPU. The experimental results show that the proposed approach can improve the speed of convolution computation by 20--30 \%, compared with existing state-of-the-art works with less accuracy loss.},
+  Doi                      = {10.1007/s11265-016-1129-2},
+  ISSN                     = {1939-8115},
+  Url                      = {http://dx.doi.org/10.1007/s11265-016-1129-2}
+}
+
+@InProceedings{Jiang2015,
+  Title                    = {Categorizing Big Video Data on the Web: Challenges and Opportunities},
+  Author                   = {Y. G. Jiang},
+  Booktitle                = {Multimedia Big Data (BigMM), 2015 IEEE International Conference on},
+  Year                     = {2015},
+  Month                    = {April},
+  Pages                    = {13-15},
+
+  Abstract                 = {Video categorization is a very important problem with many applications like content search and organization, smart content-aware advertising, open-source intelligence analysis, etc. This paper discusses selected representative research progresses in categorizing big video data, with a focus on the user-generated videos on the Internet. We identify two major challenges in this vibrant field and envision promising directions that deserve in-depth future investigations. The discussions in this paper are brief but hopefully useful for quickly understanding the current progress and knowing where we should go in the next couple of years.},
+  Doi                      = {10.1109/BigMM.2015.17},
+  Keywords                 = {Big Data;Internet;public domain software;video retrieval;Internet;big video data categorization;content search;open-source intelligence analysis;smart content-aware advertising;user-generated videos;Acoustics;Benchmark testing;Feature extraction;Multimedia communication;Neural networks;Semantics;Streaming media;Deep Learning;Video Categorization}
+}
+
+@InProceedings{Kumar2015,
+  Title                    = {High Performance Object Detection on Big Video Data Using GPUs},
+  Author                   = {P. Kumar},
+  Booktitle                = {Multimedia Big Data (BigMM), 2015 IEEE International Conference on},
+  Year                     = {2015},
+  Month                    = {April},
+  Pages                    = {383-388},
+
+  Abstract                 = {High resolution cameras have become inexpensive, compact and ubiquitously present in smart phones and surveillance systems. As a result huge volumes of images and video data are being generated daily. This availability of big video data has created challenges to video processing and analysis. Novel and scalable data management and processing frameworks are needed to meet the challenges posed by the big video data. This paper focuses on the first step in meeting this challenge that is to have high performance processing of big video data using GPUs. Parallel implementation of video object detection algorithm is presented along with fine grain optimization techniques and algorithm innovation. Experimental results show significant speedups of the algorithms resulting in real time processing of HD and beyond HD (like panoramic) resolution videos.},
+  Doi                      = {10.1109/BigMM.2015.65},
+  Keywords                 = {Big Data;graphics processing units;object detection;parallel algorithms;video signal processing;GPU;big video data processing;parallel implementation;video object detection algorithm;Cameras;Graphics processing units;High definition video;Instruction sets;Labeling;Object detection;Streaming media;Big video data;GPU implementation;foreground object detection;video surveillance}
+}
+
+@Article{Sainath2015,
+  Title                    = {Deep Convolutional Neural Networks for Large-scale Speech Tasks},
+  Author                   = {Tara N. Sainath and Brian Kingsbury and George Saon and Hagen Soltau and Abdel-rahman Mohamed and George Dahl and Bhuvana Ramabhadran},
+  Journal                  = {Neural Networks },
+  Year                     = {2015},
+  Note                     = {Special Issue on “Deep Learning of Representations” },
+  Pages                    = {39 - 48},
+  Volume                   = {64},
+
+  Abstract                 = {Abstract Convolutional Neural Networks (CNNs) are an alternative type of neural network that can be used to reduce spectral variations and model spectral correlations which exist in signals. Since speech signals exhibit both of these properties, we hypothesize that \{CNNs\} are a more effective model for speech compared to Deep Neural Networks (DNNs). In this paper, we explore applying \{CNNs\} to large vocabulary continuous speech recognition (LVCSR) tasks. First, we determine the appropriate architecture to make \{CNNs\} effective compared to \{DNNs\} for \{LVCSR\} tasks. Specifically, we focus on how many convolutional layers are needed, what is an appropriate number of hidden units, what is the best pooling strategy. Second, investigate how to incorporate speaker-adapted features, which cannot directly be modeled by \{CNNs\} as they do not obey locality in frequency, into the \{CNN\} framework. Third, given the importance of sequence training for speech tasks, we introduce a strategy to use ReLU+dropout during Hessian-free sequence training of CNNs. Experiments on 3 \{LVCSR\} tasks indicate that a \{CNN\} with the proposed speaker-adapted and ReLU+dropout ideas allow for a 12%–14% relative improvement in \{WER\} over a strong \{DNN\} system, achieving state-of-the art results in these 3 tasks. },
+  Doi                      = {http://dx.doi.org/10.1016/j.neunet.2014.08.005},
+  ISSN                     = {0893-6080},
+  Keywords                 = {Deep learning},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0893608014002007}
+}
+
+@InProceedings{Tong2015,
+  Title                    = {CNN-based shot boundary detection and video annotation},
+  Author                   = {W. Tong and L. Song and X. Yang and H. Qu and R. Xie},
+  Booktitle                = {2015 IEEE International Symposium on Broadband Multimedia Systems and Broadcasting},
+  Year                     = {2015},
+  Month                    = {June},
+  Pages                    = {1-5},
+
+  Abstract                 = {With the explosive growth of video data, content-based video analysis and management technologies such as indexing, browsing and retrieval have drawn much attention. Video shot boundary detection (SBD) is usually the first and important step for those technologies. Great efforts have been made to improve the accuracy of SBD algorithms. However, most works are based on signal rather than interpretable features of frames. In this paper, we propose a novel video shot boundary detection framework based on interpretable TAGs learned by Convolutional Neural Networks (CNNs). Firstly, we adopt a candidate segment selection to predict the positions of shot boundaries and discard most non-boundary frames. This preprocessing method can help to improve both accuracy and speed of the SBD algorithm. Then, cut transition and gradual transition detections which are based on the interpretable TAGs are conducted to identify the shot boundaries in the candidate segments. Afterwards, we synthesize the features of frames in a shot and get semantic labels for the shot. Experiments on TRECVID 2001 test data show that the proposed scheme can achieve a better performance compared with the state-of-the-art schemes. Besides, the semantic labels obtained by the framework can be used to depict the content of a shot.},
+  Doi                      = {10.1109/BMSB.2015.7177222},
+  ISSN                     = {2155-5044},
+  Keywords                 = {neural nets;video coding;CNN;TRECVID 2001 test data;content-based video analysis;convolutional neural networks;management technologies;semantic labels;video annotation;video data;video shot boundary detection;Accuracy;Computed tomography;Feature extraction;Indexing;Mathematical model;Neural networks;Semantics;Retrieval and indexing;convolutional neural networks;deep learning;shot boundary detection;video coding and processing}
+}
+
+@InProceedings{Wu2015,
+  Title                    = {Multimedia Analysis with Deep Learning},
+  Author                   = {Q. Wu and H. Zhang and S. Liu and X. Cao},
+  Booktitle                = {Multimedia Big Data (BigMM), 2015 IEEE International Conference on},
+  Year                     = {2015},
+  Month                    = {April},
+  Pages                    = {20-23},
+
+  Abstract                 = {Recently, deep learning method has been attracting more and more researchers due to its great success in various computer vision tasks. Particularly, some researchers focus on the study of multimedia analysis by deep learning method, and the research tasks mainly include the following six aspects: classification, retrieval, segmentation, tracking, detection and recommendation. As far as we know, there is not any literature conducting on survey of these studies, and it is of great significance for the community to review this subject. In this paper, we discuss the application of deep learning method in the six multimedia analysis tasks, and also point out the future directions of deep learning in multimedia analysis.},
+  Doi                      = {10.1109/BigMM.2015.27},
+  Keywords                 = {computer vision;image classification;image retrieval;image segmentation;learning (artificial intelligence);multimedia systems;object detection;object tracking;computer vision;deep learning method;image classification;image detection;image recommendation;image retrieval;image segmentation;image tracking;multimedia analysis;Brain models;Feature extraction;Learning systems;Multimedia communication;Neural networks;Tracking;classification;deep learning;detection;multimedia analysis;recommendation;retrieval;segmentation;tracking}
+}
+

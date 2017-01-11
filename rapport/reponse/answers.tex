@@ -1,0 +1,267 @@
+\documentclass[11pt]{article}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+%\usepackage{apacite} 
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{algorithm2e}
+\usepackage{amssymb}
+\usepackage[normalem]{ulem}
+\usepackage[left=3.3cm,right=3.3cm,top=3.5cm,bottom=3.5cm]{geometry}
+ 
+
+% ======================================================= %
+\newcounter{commentNum}
+\setcounter{commentNum}{0}
+\newtheorem{mydef}{Definition}
+% ======================================================= %
+% macros
+\newcommand{\question}[1]{\addtocounter{commentNum}{1}\vspace{2.5em}\noindent
+\hangindent=0em \textbf{\textcolor{Maroon}{\uline{Comment
+\arabic{commentNum}}:~}}{\sffamily{#1}}}
+\newcommand{\answer}[0]{\vspace{0.5em} \hangindent=2.3em \textbf{\textcolor{NavyBlue}{\uline{Answer \arabic{commentNum}:~}}}}
+\definecolor{darkred}{rgb}{1,.6,.6}
+\DeclareRobustCommand\problemline{\bgroup\markoverwith{\textcolor{darkred}{\rule[-0.9ex]{4pt}{3pt}}}\ULon}
+\DeclareRobustCommand{\problem}[1]{\problemline{#1}} % soul
+\setcounter{secnumdepth}{-1}
+\renewcommand {\theenumi}{\roman{enumi}}
+\newcommand{\newlen}[0]{TODO}
+\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+\definecolor{brightgreen}{rgb}{0.4, 1.0, 0.0}
+\definecolor{darkorange}{rgb}{1.0, 0.55, 0.0}
+\definecolor{pinkpearl}{rgb}{0.91, 0.67, 0.81}
+
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.75em}
+
+\begin{document}
+% ======================================================= %
+\title{\textsc{Author's Response \\ to the Reviewers' Comments}}
+
+%\subtitle{}
+\author{
+	\small for the thesis manuscript entitled:\\~ \\
+	\textit{\small Fuzzy Reasoning for Multimedia Semantic Interpretation:} \\
+	\textit{\small Fuzzy Ontology Based Model for Video Indexing}
+}
+
+\date{\small November $16^{th}$, 2016}
+
+ 
+\maketitle
+% ======================================================= %
+%\noindent Dear editor and reviewers,\\
+
+	I would like to thank the reviewers for their interest in my work and their
+	relevant and helpful comments that will greatly improve and velarize the thesis manuscript. 
+	Thus, I tried to do my best to respond to the raised points. 
+
+	The reviewers have brought up good comments and the opportunity 
+	to clarify our research objectives and results. In this document, I have
+	checked all the comments provided by the reviewers and have made necessary 
+	changes according to their recommendations.
+
+	\vfill
+	Yours sincerely, Mohamed ZARKA.
+
+
+	\newpage
+
+% ======================================================= %
+\section{Answers to reviewer: Professor Fakhri Karray}
+
+\question{There	are several typos and editorial	mistakes and strongly recommend the candidate to carefully proofread the thesis.} 
+
+\answer We apologize for the typos and the editorial mistakes. They were considered and corrected.
+
+
+\question{The candidate made very good literature review and has highlighted recent work in the field. 
+	Possibly more would have been proposed especially recent approaches highlighted in the literature dealing
+	with big data based video clip repositories indexing and search using on-line learning and domain adaptation. 
+	This is a very promising research direction and would wish to have the candidate mention 
+	it as future potential direction.}
+
+\answer We thank the reviewer for his proposal.
+
+	In our dissertation, we focused mainly on an ontology-based framework to enhance 
+	semantic indexing abilities. Our aim was to prove that such a framework could enhance 
+	the accuracy of a semantic interpretation for a given content. We have conducted 
+	then some works on how to extract valuable knowledge to be populated within the 
+	proposed ontology, but we haven’t contributed in the ontology content evolution. 
+	
+	As the reviewer pointed out, we think that domain adaptation could be a very 
+	interesting research direction to be considered. In fact, many research works 
+	are proving that deep neural networks have the ability to compute domain invariant features
+	 \cite{Donahue2014,Yosinski2014,Liu2016,Kumar2016}. Then, and when dealing with big 
+	 data based video contents, it could be interesting to consider deep neural 
+	 networks when the distribution of the training data is different from the test one.	 
+	 Thus, we think that the proposed abduction engine (defined in the second contribution) 
+	 could be improved by extracting cross-domain knowledge. 
+	
+	In the section $7.2$, we added a 
+	paragraph to  highlight that the domain adaptation is a track that we 
+	should follow in our future work.
+
+
+\question{The examiner would have wished to see more powerful performance metric such as recall performance 
+	and computation requirement (algorithmic time performance).}
+	
+\answer Mainly, we conducted four experimentations within three benchmarks: 
+	\begin{itemize}
+	 \item 	\textsc{TrecVid2010} (for the contribution $C_{1}$),
+	 \item  \textsc{ImageClef2012} (for the contribution $C_{2}$),
+	 \item  and \textsc{ImageClef2015} (for the contribution $C_{3}$). 
+	\end{itemize}
+	
+	As discussed in section $2.3$, each benchmark selects particular metrics 
+	to compute participants ranks. Generally, the \textsc{Map}
+	(\textit{Mean Average Precision}) is the most used metric.
+	
+	As regards to the computation requirement, we have considered such a 
+	performance aspect only for the conducted experimentations within 
+	\textsc{ImageClef2012} and \textsc{ImageClef2015}. In fact, we have not 
+	discussed the computation requirement for the \textsc{TrecVid2010} 
+	preliminary conducted experimentation. In the latter, we used a small 
+	number of rules with a lightweight deduction engine.
+
+\question{Moreover, it is very important when dealing 
+	with large data set to apply distributed/cloud computing environment to handle real-time classification
+	and detection of new concepts/relationship. This requires a certain type of the algorithm structure, 
+	not mentioned in details in this work. These are major issue on their own, and it is not expected 
+	the candidate to deal with all of them here. He	simply needs to highlight them though in the final draft.}
+
+\answer We highlighted some cloud/distributed based research works in section $3.4.2$.
+
+\question{A lot of research work is being produced these days within 
+	the framework of big data and machine learning. Some recent approaches 
+	based on machine learning have been proven to be very powerful and the 
+	candidate needs to  refer to this work. Moreover, these approaches come 
+	specifically applied to certain type of domains or classes of events 
+	(sports, movies, ads, ...). Hybrid approaches using existing solid techniques for concept
+	detection coupled with machine learning algorithms to deal with 
+	concept relationship (context)  is being proven very powerful. Candidate should 
+	mention these approaches in his references. }
+	
+
+\answer We thank the reviewer for his proposal.
+    
+	In fact, and in recent literature, a growing number of research work are being 
+	exploring the effectiveness of deep neural networks based methods in multimedia 
+	analysis, in particular Deep Convolutional Neural Networks (CNN)
+	\cite{Girshick2014,Sainath2015,Jiang2015,Tong2015,Wu2015,Druzhkov2016}.
+	
+	We highlighted such interesting approaches in section $3.4.3$, 
+	and as a potential future research direction in section $7.2$. 
+	
+
+\question{I have some issues with the publication record (in terms of quantity and quality) 
+	and strongly suggest that the candidate should really work hard on publishing his work in 
+	well-known venues pertinent to the field.}
+
+\answer We thank you for pointing this out. 
+
+	In terms of publication quality, we published our second contribution within a well known journal 
+	(Springer MTAP with impact factor of $1.331$). Actually, I am drafting a second journal paper that 
+	deals with our third contribution in order to highlight the obtained results. 
+	Yet, I target the following two journals for the submission:
+	\textit{ACM Multimedia Computing, Communications, and Applications} (Impact Factor of $2.465$),
+	or \textit{Springer International Journal of Computer Vision} (Impact Factor of $4.270$).
+
+	In terms of publication quantity, I would like to notice that handling large amount of data was a 
+	real hard task with the use of very classical computing machines. I will try to do my best to 
+	increase my publication rate. Thank you again for this comment.
+
+	As for industrial development, we prepared a patent (to be submitted within \textsc{Innorpi}: \textit{National Institute of 
+	Standardization and Industrial Property}). This patent is entitled \textit{``Dispositif d’Enrichissement 
+	Sémantique en utilisant des ONTOlogies (DESONTO) pour l'amélioration de l'indexation des 
+	contenus multimédias''}, and it details the semantic enhancement for multimedia retrieval systems 
+	through the use of fuzzy ontologies (as described in our second contribution C2). 
+	This patent is currently under review.
+	Furthermore, we are preparing a second patent about the scalability aspect. 
+	This patent is entitled \textit{``Annotation Sémantique Rapide des Images en utilisant des Ontologies 
+	(ASRIO) pour l’indexation des contenus visuels.''}, 
+	and it proposes an alleviated computing task for semantic concept detection within multimedia contents. 
+	This patent is being drafted.
+
+	%In order to highlight such a promising industrial development, we added a new section entitled 
+	%“\textit{7.3 Future Development Directions}” in the chapter “\textit{Conclusions and Perspectives}”.
+
+% ==================================================================================================== %
+% ==================================================================================================== %        
+% ==================================================================================================== %        
+% ==================================================================================================== %        
+% ==================================================================================================== %        
+% ==================================================================================================== %        
+% ==================================================================================================== % 
+\newpage      
+\setcounter{commentNum}{0}
+\section{Answers to Reviewer: Professor Sami Faiz}
+
+\question{Le chapitre 4 est dédié à la première contribution du candidat: 
+    Mise en place d’un modèle à base de connaissances pour l’indexation de la vidéo. 
+    Le candidat a su, dans un contexte très technique, apporter une contribution à trois étapes. 
+    Les mises en œuvre et les résultats sont indéniables. En effet, l’outil 
+    d’annotation assistée et collaborative de la vidéo réalisé a fait l’objet de plusieurs 
+    expérimentations dans le cadre, notamment, de compétition internationale TrecViD2010. 
+    Nous aurions juste aimé avoir une discussion au cas où les connaissances pouvant être 
+    elles mêmes floues.}
+
+\answer La représentation des connaissances dans une ontologie 
+    consiste à définir des faits et des assertions. Ces derniers définissent  soit un individu 
+    $a$ comme étant une instance d'un concept $C$ ($\langle{}C(a)\rangle{}$), soit deux 
+    individues $a$ et $b$ qui sont reliés par un rôle $R$ ($\langle{}R(a,b)\rangle{}$) 
+    \cite{Grau2008}. 
+    
+    La logique floue est également employée pour représenter qu'un individu $a$ est
+    une instance d'un concept $C$ avec un certain degré d'appartenance 
+    $n$ ($\langle{}C(a)\geq  n\rangle{}$ avec $n \in [0,1]$), ou deux individus 
+    $a$ et $b$ sont reliés par un rôle $R$ avec un certain degré d'appartenance
+    $n'$ ($\langle{} R(a,b)\geq  n'\rangle{}$ avec $n' \in [0,1]$) 
+    \cite{Stoilos2007,Stoilos2010,Horrocks2011}. La logique floue permet ainsi de 
+    manipuler l'incertitude au niveau des connaissances représentées. 
+    
+    
+    Dans le cadre de notre travail de recherche, nous avons opté d'utiliser des bases de 
+    connaissances afin d’améliorer la qualité sémantique des systèmes d’indexation. 
+    Dans le chapitre 4, nous avons proposé une première modélisation pour un système d’enrichissement 
+    sémantique à base d’ontologies et de leurs capacités d’abduction et de déduction. 
+    Cette première modélisation a été mise en place par deux étapes :
+      \begin{itemize}
+       \item Dans la première étape (la section 4.2), nous avons proposé d’utiliser 
+       l’ontologie \textsc{LsCom} \cite{Kennedy2006}. 
+       En effet, cette ontologie représente des concepts sémantiques 
+       (ex. \textit{personne, président, voiture, immeuble, \dots{}}) 
+       et des relations de généralisation entre ces concepts sémantiques 
+       (ex. \textit{président \textbf{is a} personne}). 
+       Ainsi, les connaissances utilisées dans cette première partie ne sont pas floues ;
+       
+       \item dans la deuxième partie (la section 4.3), nous avons présenté une ontologie qui permet 
+       de manipuler des relations entres concepts sémantiques dans le cadre d’un contexte
+       sémantiques particulier. De plus, ces relations sont floues. Nous avons proposé ainsi 
+       deux qualificateurs flous : \textit{Strong} et \textit{Weak} pour qualifier une 
+       relation entre deux concepts comme, respectivement, forte ou faible. 
+      \end{itemize}
+      
+      Ainsi, les connaissances qui ont été traité dans le chapitre 4 et dans la section 4.2 
+      ont été extraites à partir de l’ontologie \textsc{LsCom}, donc des connaissances non floues. 
+      Mais à partir de la section 4.3, nous avons commencé à utiliser des connaissances floues. 
+      Avec l’expérimentation que nous avons mené sur la base de teste de \textsc{TrecVid2010}, 
+      nous avons obtenu des résultats qui montrent que l’utilisation de l’ontologie floue que 
+      nous avons proposé $O^{f}$, permet en effet d’améliorer la qualité d’un système 
+      d’indexation de la vidéo.
+      
+      Étant donné que nous n’avons pas bien souligné dans notre manuscrit l’apport de 
+      l’utilisation des connaissances floues dans l’amélioration de la qualité d’indexation,
+      nous avons apporté une modification à la section 4.3.5.
+
+
+ 
+% ======================================================= %
+\newpage
+\bibliographystyle{apalike}
+\bibliography{../bibliography/mybib2}
+\end{document}
+% ======================================================= %

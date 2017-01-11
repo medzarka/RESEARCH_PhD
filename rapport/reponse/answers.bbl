@@ -1,0 +1,95 @@
+\begin{thebibliography}{}
+
+\bibitem[Donahue et~al., 2014]{Donahue2014}
+Donahue, J., Jia, Y., Vinyals, O., Hoffman, J., Zhang, N., Tzeng, E., and
+  Darrell, T. (2014).
+\newblock Decaf: A deep convolutional activation feature for generic visual
+  recognition.
+\newblock In {\em ICML}, pages 647--655.
+
+\bibitem[Druzhkov and Kustikova, 2016]{Druzhkov2016}
+Druzhkov, P.~N. and Kustikova, V.~D. (2016).
+\newblock A survey of deep learning methods and software tools for image
+  classification and object detection.
+\newblock {\em Pattern Recognition and Image Analysis}, 26(1):9--15.
+
+\bibitem[Girshick et~al., 2014]{Girshick2014}
+Girshick, R., Donahue, J., Darrell, T., and Malik, J. (2014).
+\newblock Rich feature hierarchies for accurate object detection and semantic
+  segmentation.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 580--587.
+
+\bibitem[Grau et~al., 2008]{Grau2008}
+Grau, B.~C., Horrocks, I., Motik, B., Parsia, B., Patel-Schneider, P., and
+  Sattler, U. (2008).
+\newblock \{OWL\} 2: The next step for \{OWL\}.
+\newblock {\em Web Semantics: Science, Services and Agents on the World Wide
+  Web}, 6(4):309 -- 322.
+\newblock Semantic Web Challenge 2006/2007.
+
+\bibitem[Horrocks et~al., 2011]{Horrocks2011}
+Horrocks, I., Pan, J.~Z., Stamou, G.~B., Stoilos, G., and Tzouvaras, V. (2011).
+\newblock Reasoning with very expressive fuzzy description logics.
+\newblock {\em CoRR}, abs/1111.0039.
+
+\bibitem[Jiang, 2015]{Jiang2015}
+Jiang, Y.~G. (2015).
+\newblock Categorizing big video data on the web: Challenges and opportunities.
+\newblock In {\em Multimedia Big Data (BigMM), 2015 IEEE International
+  Conference on}, pages 13--15.
+
+\bibitem[Kennedy and Hauptmann, 2006]{Kennedy2006}
+Kennedy, L. and Hauptmann, A. (2006).
+\newblock Lscom lexicon definitions and annotations (version 1.0).
+\newblock Technical report, Columbia University.
+
+\bibitem[Kumar et~al., 2016]{Kumar2016}
+Kumar, S., Gao, X., and Welch, I. (2016).
+\newblock Learning under data shift for domain adaptation: A model-based
+  co-clustering transfer learning solution.
+\newblock In {\em Pacific Rim Knowledge Acquisition Workshop}, pages 43--54.
+  Springer.
+
+\bibitem[Liu et~al., 2016]{Liu2016}
+Liu, G., Yan, Y., Subramanian, R., Song, J., Lu, G., and Sebe, N. (2016).
+\newblock Active domain adaptation with noisy labels for multimedia analysis.
+\newblock {\em World Wide Web}, 19(2):199--215.
+
+\bibitem[Sainath et~al., 2015]{Sainath2015}
+Sainath, T.~N., Kingsbury, B., Saon, G., Soltau, H., rahman Mohamed, A., Dahl,
+  G., and Ramabhadran, B. (2015).
+\newblock Deep convolutional neural networks for large-scale speech tasks.
+\newblock {\em Neural Networks}, 64:39 -- 48.
+\newblock Special Issue on “Deep Learning of Representations”.
+
+\bibitem[Stoilos et~al., 2010]{Stoilos2010}
+Stoilos, G., Stamou, G.~B., and Pan, J.~Z. (2010).
+\newblock Fuzzy extensions of {OWL:} logical properties and reduction to fuzzy
+  description logics.
+\newblock {\em Int. J. Approx. Reasoning}, 51(6):656--679.
+
+\bibitem[Stoilos et~al., 2007]{Stoilos2007}
+Stoilos, G., Stamou, G.~B., Pan, J.~Z., Tzouvaras, V., and Horrocks, I. (2007).
+\newblock Reasoning with very expressive fuzzy description logics.
+\newblock {\em J. Artif. Intell. Res.(JAIR)}, 30:273--320.
+
+\bibitem[Tong et~al., 2015]{Tong2015}
+Tong, W., Song, L., Yang, X., Qu, H., and Xie, R. (2015).
+\newblock Cnn-based shot boundary detection and video annotation.
+\newblock In {\em 2015 IEEE International Symposium on Broadband Multimedia
+  Systems and Broadcasting}, pages 1--5.
+
+\bibitem[Wu et~al., 2015]{Wu2015}
+Wu, Q., Zhang, H., Liu, S., and Cao, X. (2015).
+\newblock Multimedia analysis with deep learning.
+\newblock In {\em Multimedia Big Data (BigMM), 2015 IEEE International
+  Conference on}, pages 20--23.
+
+\bibitem[Yosinski et~al., 2014]{Yosinski2014}
+Yosinski, J., Clune, J., Bengio, Y., and Lipson, H. (2014).
+\newblock How transferable are features in deep neural networks?
+\newblock In {\em Advances in neural information processing systems}, pages
+  3320--3328.
+
+\end{thebibliography}

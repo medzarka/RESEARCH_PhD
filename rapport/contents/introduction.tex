@@ -1,0 +1,399 @@
+\chapter{General Introduction}
+\label{intro}
+%\addcontentsline{toc}{chapter}{General Introduction}
+%\markboth{General Introduction}{}
+
+	\section{Background and Motivation}
+	%\addcontentsline{toc}{section}{Background and Motivation}
+	%\sectionmark{Background and Motivation}
+
+	Due to the advance of modern multimedia services and techniques, and the exponential growth of online 
+	multimedia data, images and video are overflowing our everyday life. \textsc{Flickr}, as a photo 
+	sharing website, stores over 5 billion of images and records an uploading rate of over 3000 
+	images per minute\footnote{\texttt{http://blog.flickr.net/en/2010/09/19/5000000000}}. 
+	\textsc{YouTube} records a rate of 300 hours  of uploaded videos per 
+	minute\footnote{\texttt{https://www.youtube.com/yt/press/fr/statistics.html}}.
+	Due to this huge amount of available information, and the diversity of their support and content 
+	(newscasts, sports, entertainment programs, movies, documentaries, video surveillance, \dots{}), 
+	some problems and difficulties are raising, and a need for efficient tools to access to 
+	such amount of multimedia content was strongly stated. 
+
+	The common information retrieval model consists in handling useful information through 
+	searching and retrieving from large document collections \citep{Baeza-Yates1999,Manning2008,Grossman2012}. 
+	Basically, this model is based on two processes: (1) the indexing process which interprets 
+	and stores the content of documents, and (2) the search process which matches a user 
+	query and the stored document interpretations in order to evaluate their relevance and 
+	output relevant documents.
+	
+	Image and video indexing is basically based on two different approaches: \emph{Text Based} 
+	indexing \citep{Chang1980} and \emph{Content Based} indexing \citep{Smeaton2008}. While the \emph{Text Based}
+	means that a content is manually annotated by a text describing contained objects and events, 
+	the \emph{Content Based} indexing means the extraction of features (like \revAnglais{color} and shape) in order 
+	to automatically detect contained semantic objects.
+
+
+	Authors in \citep{Hauptmann2007,Wang2008,Hauptmann2007a,Kompatsiaris2008,Darwish2015,Ves2015} 
+	pointed out that although the availability of many solutions to fill the so-called \emph{semantic gap} \citep{Hare2006}
+	between the automatic interpretation and what human expects from the indexing task; 
+	none of them yields satisfactory results:  the problem remains open for further research. 
+	In \citep{Smeulders2000}, the \emph{semantic gap} is defined as:
+
+	\begin{mydef}
+	\textit{``\dots{} the lack of coincidence between the information that one can extract from the visual 
+	data and the interpretation that the same data have for a user in a given situation.''}
+	\end{mydef}
+	
+	As illustrated in figure \ref{introduction_2}, the semantic gap manifests itself as a computational 
+	problem for the indexing process.  At the low-level, the raw media refers to an image.%, for our example case. 
+	The content-based indexing approaches extract features vectors that represent regions of 
+	the image or its whole content. At a higher level, the \emph{objects} are detected through combinations
+	of extracted features vectors. \emph{Symbolic labels} may be assigned to these objects (\emph{Crowd} and 
+	\emph{Road} for the given example). Nevertheless, such a classical process (based on extracting and 
+	combining feature vectors) does not typically capture all the semantics in a given content. In fact, 
+	the image context and the relationships between the contained objects contribute to \revAnglais{reach a} high 
+	level \revAnglais{of} semantic representation and interpretation of the media content.
+	Thus, more than the content analysis is
+	requested for a better semantic interpretation: The knowledge structure components showed its capabilities to 
+	reach such a higher semantic interpretation. Moreover, the information retrieval \revAnglais{is} more and more supported by
+	\revAnglais{knowledge} management processes.
+
+% #, thus, essential in order to give a more understanding of present objects and events, and then, a better interpretation for the content.
+
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[scale=0.75]{figures/introduction_2.pdf}
+		\caption{The Semantic Gap: Hierarchy of levels between the raw media and full semantics}
+		\label{introduction_2}
+	\end{figure}
+
+	In the current era of multimedia indexing, there is an emerging attention in leveraging massive exploration 
+	of knowledge management capacities in order to reduce the semantic gap. Indeed, the use of background 
+	knowledge could enrich and enhance  a semantic interpretation about a content. 
+	As an example, the figure \ref{introduction_1} displays four images where a classical automatic 
+	indexing process could detect the semantic object  \textit{``crowd''} and the semantic object
+	\emph{``road''} (for the images $B$, $C$ and $D$). Such a basic object's recognition did not reflect
+	the complete semantics of each one.
+	
+	%Such interpretations of the four images is not enough to properly interpret their contents. 
+	%Such a basic object's recognition did not reflect the complete semantics of each one.
+	On the other side, the human perception 
+	uses a pre-established knowledge in order to better deduce newer information about that content. For the image $A$,
+	one can deduce that the \emph{crowd} attends a \emph{Sport Game} (like football). The image $B$ depicts also a 
+	\emph{crowd} ahead a \emph{road}, one can deduce also that this \emph{crowd} of people attends a \emph{car racing}. 
+	The image $C$ depicts also  a \emph{crowd} ahead a \emph{road}, but one can deduce that  they participate to a protest 
+	since people \revAnglais{take} many slogans.  Finally, the image $D$ figures a \emph{crowd} and a \emph{road}, but we 
+	can not deduce  nor a \emph{protest} neither a \emph{car racing}; just a \emph{crowd} of people crossing a \emph{road}.
+
+	The aforementioned examples incur a rather weak setting regarding the efficiency of the classical indexing process, 
+	establishing the need for a knowledge-based models and approaches. Shedding further light, 
+	such a knowledge-based approaches may allow not only for \revAnglais{better semantic interpretation capabilities} but also for 
+	the identification of open challenges and future directions and opportunities in multimedia retrieval.
+
+	Through answering many of aforementioned limitations, our motivation goes further toward exploring 
+	knowledge-based approaches for enhancing the indexing process capabilities.
+
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[scale=0.6]{figures/introduction_1.pdf}
+		\caption{Different semantic interpretation for images figuring the semantic concept \emph{crowd}}
+		\label{introduction_1}
+	\end{figure}
+
+	\section{Research Issues}
+	%\addcontentsline{toc}{section}{Research Issues}
+	%\sectionmark{Research Issues}
+	Despite advanced \gls{IR} capabilities, user still unsatisfied by their delivered search results. This discontent 
+	is caused commonly by \revAnglais{non-relevant} results that can be due to a \revAnglais{non-good} understanding of stored documents, 
+	and/or the \revAnglais{non-apprehension} of the user query. In fact, popular and widely-used search engines, 
+	like \textsc{Google}, \textsc{Bing} and \textsc{Yahoo !}, essentially rely on classical 
+	keyword matching techniques, and their relevance is often unsatisfying owing to inaccurate 
+	textural tag information.
+
+	In such a situation, the multimedia retrieval community has looked for new approaches
+	in order to make the availability of automated and efficient semantic interpretations for multimedia contents. 
+	Thus, a number of diverse approaches for semantic multimedia content analysis have been proposed addressing 
+	the discovery of multi-modal features \citep{Marques2012} like visual features (patterns, color, histograms, \dots{}) and
+	audio features. In particular, Content based image retrieval 
+	\gls{CBIR} has attracted \revAnglais{a lot of attention} over the last two decades 
+	\citep{Rui1999,Smeulders2000,Datta2005,Liu2007,Huurnink2012}. 
+	However, these earlier approaches failed to reduce the semantic gap between the extracted features and the 
+	user's perception. Then, the next approaches focused on exploring these low-level features in order 
+	to detect high level-feature (semantic objects and concepts) \citep{Datta2008,Snoek2008,Egozi2011}. 
+	These semantic analysis based approaches proved to be highly effective and useful in many application 
+	areas, but, once again, failed to deliver an efficient semantic interpretation \citep{Snoek2010,Over2013}.
+	Under such a context, exploring further semantics within a multimedia content is a major challenge.
+
+	To sum up, in our dissertation, we considered that a knowledge based approach should be more explored 
+	and tackled. We addressed the following research issues:
+
+	
+	\begin{description}
+		\item[Issue 1: A novel \revAnglais{knowledge} based approach for video/image indexing]
+		other than low-level and high-level ones, further semantic information is gathered 
+	from a multimedia content in order to better interpret a semantic content. Motivated by a kindred vision 
+	of human perception, new approaches have investigated the engineering of knowledge-based approaches 
+	for multimedia retrieval, in particular, the ontologies 
+	\citep{Mylonas2008,Hudelot2008,Mylonas2009,Elleuch2011,Paliouras2011,Bannour2014}.
+	Yet, ontologies \citep{Petridis2004,Wallace2005,Moeller2008,Dou2015}
+	(as a knowledge database) are powerful tools to design concepts/contexts 	
+	and their interrelationships. In general, ontology-based approaches 
+	\revAnglais{consist} in defining a knowledge conceptualization and a reasoning process in order to handle and 
+	enhance a semantic interpretation. However, these recent approaches 
+	still facing some issues related to the construction of the ontology and the definition of its content.
+
+		\item[Issue 2: dealing with uncertain knowledge and interpretations]
+	Multimedia content interpretation and the user perception give evidence to the uncertain nature of the retrieval
+	task which can benefit \revAnglais{from} either fuzzy or probabilistic approaches. In order to model uncertain and 
+	imprecise knowledge for multimedia contents, many approaches were proposed. There are many discussions
+	about these two approaches and their capabilities to handle and support uncertainty.
+	In fact, endless arguments are defended by the knowledge extraction community about  the effectiveness 
+	of fuzzy approaches and probabilistic ones \citep{Gaines1978,Bosko1990,Sanjaa2007,Zadeh2014,Zadeh2015}. 
+	In this dissertation, we focused on the use of a fuzzy approach. Thus, the use of fuzzy 
+	processing techniques to multimedia indexing and retrieval approaches has been extensively investigated 
+	in literature. Mainly, fuzzy retrieval models offer more flexibility to handle indexing terms, query 
+	terms and pertinent document ranking. The multimedia retrieval community took advantage by the use of 
+	fuzzy theory based models for knowledge representation and management.
+
+		\item[Issue 3: Scalability]
+	Multimedia collections are increasing staggeringly. Thus, retrieving from large-scale datasets 
+	is a challenging task \citep{Villegas2013,Villegas2014,Gilbert2015,Villegas2015}.
+	The access to such an enormous \revAnglais{content} has forced the multimedia retrieval community to look for advanced scalable
+	approaches and techniques in order to make the availability of automated and efficient semantic 
+	annotation for such contents \citep{Wang2011,Zhang2012,Benavent2013,Sahbi2013,Reshma2014}.
+	
+	\end{description}
+	
+
+	Our present thesis work is part of the \textsc{i-Tv} project led by the \textsc{RegimVid} team. 
+	The latter project \revAnglais{focuses} on an intelligent and personalized access to a video data system via 
+	a complete process from low-level processing to viewing multimedia corpus. Our research works deal 
+	with issues of semantic understanding and reasoning for video/image contents. 
+	\revAnglais{In the dissertation, we particularly focus on} 
+	how to better understand and interpret an uncertain semantic content efficiently through
+	the use of fuzzy ontologies. Our approach is based on defining a fuzzy knowledge dataset in order to 
+	enhance video/image semantic interpretation, and to overcome the scalability issue. 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+
+	\section{Aims and Contributions}
+	%\addcontentsline{toc}{section}{Aims and Contributions}
+	%\sectionmark{Aims and Contributions}
+As aforementioned, the aims of this thesis are threefold. (1) At a first step, we have attempted to suggest a knowledge based model to enhance the indexing accuracy within a multimedia retrieval system. (2) Subsequently, we have concentrated our contributions on an effective use of the knowledge based model in order to improve multimedia content analysis and indexing. (3) Finally, we have concentrated our contributions on the scalability issue when handling large-scale multimedia data and a considerable amount of semantic of their contents.
+
+The figure \ref{introduction_3} illustrates the general work-flow of the proposed approach for a knowledge based framework to enhance the indexing accuracy.
+
+
+In this dissertation, we attempted to reach the following objectives:
+
+\begin{description}
+	\item[Objective 1 ($Obj_{1}$)] Dealing with a new knowledge based model for
+		multimedia indexing. The objective is to develop a framework able to handle various information 
+		about a multimedia content, then to operate with \revAnglais{this} information in order to infer new 
+		information/knowledge through a reasoning process. Such a novel model has to define and highlight 
+		pertinent components for an efficient knowledge based indexing process \citep{Zarka2011,Ksentini2012},
+	\item[Objective 2 ($Obj_{2}$)] Handling a fuzzy knowledge 
+		when reasoning with semantic interpretations in order to enhance and enrich them. This objective 
+		aims to define a semantic structure to model required knowledge, then to specify an automated ontology 
+		population from available annotated image/video datasets, and finally to handle ontology content evolving 
+		to further improve semantics capabilities through \revAnglais{analyzing} and revising inaccurate and irrelevant
+		knowledge \citep{Elleuch2011,Zarka2015},
+	\item[Objective 3 ($Obj_{3}$)] Ensure the capability to handle a large-scale multimedia indexing 
+		collection: the scalability
+		While recent works focused on the use of semantic hierarchies to improve concept detector accuracy, 
+		this objective embodies the use of such hierarchies to reduce detector complexity and then, to handle 
+		efficiently large-scale datasets \citep{Zarka2015a}.
+\end{description}
+
+
+	Consequently, we denote that the outcomes of our thesis work will allow to address the following problems:
+	\begin{itemize}
+		\item Reducing the semantic gap through providing an effective knowledge based 
+			framework for enhancing a semantic interpretation,
+		\item Reducing the uncertainty through the use of fuzzy reasoning framework with 
+			the aim of assessing the consistency of the indexing process,
+		\item Ensuring the scalability aspect through handling hierarchical indexing process 
+			which scales well with large-scale multimedia content.
+	\end{itemize}
+
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.82]{figures/introduction__tmp.pdf}
+		\caption{The proposed knowledge based framework: Handle a knowledge dataset to enhance the indexing process accuracy}
+		\label{introduction_3}
+	\end{figure}
+
+	What was accomplished in our study is a novel ontology management which is intended to a machine-driven
+	knowledge database construction. Such a method could enable semantic improvements in large-scale multimedia 
+	content analysis and indexing. Thus, the main contributions for our thesis work are enumerated as follows 
+	(see figure \ref{introduction_3}):
+		\begin{description}
+			\item[Contribution 1 ($C_ {1}$):] A fuzzy knowledge based framework for multimedia
+				indexing to handle various interpretations about a video content. The framework 
+				operates with these initial interpretations in order to infer enhanced interpretations 
+				through a fuzzy reasoning process,
+			\item[Contribution 2 ($C_ {2}$):] An automated and scalable fuzzy ontology management approach 
+				(knowledge extraction, population, reasoning and evolving) for managing and 
+				enhancing fuzzy interpretation about a video content,
+			\item[Contribution 3 ($C_ {3}$):] A scalable ontology-driven approach to construct hierarchical 
+				Semantic concept detectors. Fuzzy knowledge \revAnglais{is} used then at both learning and detection
+				steps in order to enhance concept detectors accuracy, and to reduce the number of 
+				semantic concepts to be picked up within a content.
+		 \end{description}
+
+	In order to illustrate the semantic enhancement of concept detection introduced by our proposed scalable 
+	and generic ontology-based framework, the following section enumerates  different conducted experiments 
+	within multimedia evaluation campaigns.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\section{Evaluation and Applications}
+	%\addcontentsline{toc}{section}{Evaluation and Applications}
+	%\sectionmark{Evaluation and Applications}
+	In addition to the theoretical formulation of the proposed approach, we conducted some 
+	empirical evaluations over large-scale realistic data sets in the general domains. 
+	We first evaluated our approach within the standard benchmark 
+	\textsc{\gls{TrecVid}} \citep{Smeaton2006,Smeaton2009,Over2014}. We also applied our 
+	approach to real image data from different domains delivered by \textsc{Flickr} data 
+	collections \citep{Wang2009}.
+
+	Different evaluation metrics, including \emph{Mean Average Precision} (\gls{MAP})
+	\citep{Schoeffmann2012}, \emph{Inferred Average Precision} (\gls{infAP}) \citep{Yilmaz2008} and 
+	\emph{Geometric Mean Average Precision} (\gls{GMAP}) \citep{Thomee2012} are used in our experiments. 
+
+	Our evaluations \revAnglais{also concern} the scalability issue. We handled a large scale video 
+	dataset (about $8~000$ hours from \textsc{\gls{TrecVid}}) and a large-scale image dataset 
+	(up to $500~000$ images from \textsc{Flickr}).
+
+	Based on the proposed approaches and techniques, we participated to the development 
+	of the \textsc{RegimVid} system \citep{Elleuch2010,Feki2012,Ksibi2013}:  
+	a semantic video indexing, retrieval and visualization system.
+
+	Our conducted experiments can be epitomized within these tasks:
+	\begin{itemize}
+
+		\item \textit{Semantic Video Indexing}: We first explored a multi-modal fuzzy fusion model 
+		to handle different semantic interpretation gathered by various modalities (text, audio, visual, \dots{}).  
+		A practical system was designed to incorporate the latter fusion model. We used the developed system 
+		in order to enhance a video semantic indexing within the \emph{Semantic Indexing} task of the 
+		\textsc{\gls{TrecVid}} 2010 \citep{Elleuch2010,Zarka2011,Over2011} evaluation campaign,
+
+
+		\item \textit{Photo Annotation}: After exploring knowledge database capabilities for enhancing 
+		a semantic interpretation, we proposed a fuzzy ontology based reasoning framework for managing valuable 
+		knowledge in order to open up a semantic interpretation about a content. The proposed framework was 
+		evaluated within the \emph{ImageCLEF2012's Flickr Photo Annotation and Retrieval} 
+		\citep{Thomee2012,Zarka2015} evaluation campaign,
+
+		\item \textit{Scalable Photo Annotation}: the aforementioned knowledge based framework being formulated 
+		and evaluated, we investigated a study on the semantic indexing scalability issue through considering 
+		an ontology based hierarchical image annotation. We evaluated, then, this framework within 
+		\textit{ImageCLEF2015 Scalable Concept Image Annotation} \citep{Gilbert2015,Villegas2015,Zarka2015a} task.
+
+	\end{itemize}
+
+	\section{Thesis Overview}
+
+	At this point, many questions have arisen: what is an appropriate model/approach to introduce the
+	knowledge management in an indexing system? Then, how to profit from a knowledge database to enhance 
+	the indexing accuracy? Finally, how to cope with the scalability issue? 
+
+	Keeping in mind our chronological progression in achieving the enumerated above objectives and 
+	contributions, the rest of the present dissertation is organized through three parts as follows:
+
+	\begin{enumerate}
+		\item \textit{\textbf{Part I - Video Indexing: Background and Trends}}
+		\begin{itemize}
+			\item \textbf{Chapter \ref{state1}:} introduces a general overview of the Multimedia Information Retrieval.
+			It describes also the main proposed models, the common assessment measures and the methodologies.
+			The chapter ends with an enumeration of actual video indexing issues and trends.
+			
+			\item \textbf{Chapter \ref{state2}:} introduces a survey of the use of fuzzy knowledge databases to solve problems 
+			discussed in the previous chapter. After enumerating actual related works, we show a discussion 
+			over the survey in order to motivate and introduce our proposed fuzzy ontology based model 
+			for video indexing	
+		\end{itemize}
+
+		\item \textit{\textbf{Part II - Fuzzy Ontology Based Framework for Video Indexing}}
+		\begin{itemize}
+			\item \textbf{Chapter \ref{c1}:} displays a new approach for video indexing through the use of 
+				fuzzy ontologies. Our approach takes advantages of the fuzzy knowledge in order 
+				to enhance video indexing accuracy. Then, we focus on modelling and handling \revAnglais{this}
+				fuzzy knowledge within an ontology. Therefore, an ontology management model is presented.
+
+			\item \textbf{Chapter \ref{c2}:} proposes to go further in the use of fuzzy ontologies models for 
+				enhancing video indexing accuracy. In particular, we address the following issues: 
+				how to extract valuable fuzzy knowledge? How to model \revAnglais{this} fuzzy knowledge within
+				an ontology? How to reason with \revAnglais{this} fuzzy knowledge in order to improve a semantic
+				interpretation? And finally, how to evolve the extracted knowledge? Therefore, we propose 
+				to \revAnglais{automatically construct} fuzzy ontologies to handle efficiently information about 
+				a video content.
+
+			\item \textbf{Chapter \ref{c3}:} explores the contribution of semantic hierarchies for image annotation 
+				in order to handle the scalability issue. Thus, we propose an ontology driven hierarchical 
+				image annotation owing to reduce the number \revAnglais{of semantic concepts} to be detected 
+				within a content. 
+		\end{itemize}
+
+		\item \textit{\textbf{Part III - Conclusions and Future Research Directions}}
+		\begin{itemize}
+			\item \textbf{Chapter \ref{conlusion}:} states a feedback on our contributions and discusses
+				future directions that can be tackled by the presented research topics.
+		\end{itemize}
+	\end{enumerate}
+
+	
+
+	\section{Publications}
+	%\addcontentsline{toc}{section}{Publications}
+	The aforementioned contributions in the fuzzy ontology based semantic enhancement for video 	
+	indexing have been justified  by the following scientific publications:  
+		\paragraph{International Journal}
+			\begin{itemize}
+				\item \textbf{Zarka, M.}, Ben Ammar, A., \&{} Alimi, A. (2016). 
+				Fuzzy reasoning framework to improve semantic video interpretation. 
+				\emph{Multimedia Tools and Applications}, $75$(10), 5719–5750. \\Retrieved from 
+				\texttt{http://dx.doi.org/10.1007/s11042-015-2537-1}
+				\\doi: \texttt{10.1007/s11042-015-2537-1}
+			\end{itemize}
+
+		\paragraph{International Peer-Reviewed Communications}
+			\begin{itemize}
+				\item \textbf{Zarka, M.}, Ammar, A. B., \&{} Alimi, A. M. (2011). 
+				Multimodal fuzzy fusion system for semantic video indexing. 
+				In \emph{IEEE symposium on computational intelligence for multimedia,
+				signal and vision processing, CIMSIVP 2011, Paris, France} (pp. 60--66). IEEE.
+
+				\item Elleuch, N., \textbf{Zarka, M.}, Ammar, A. B., \&{} Alimi, A. M. (2011). 
+				A fuzzy ontology: Based framework for reasoning in visual video content analysis 
+				and indexing. In Proceedings of the eleventh international 
+				workshop on multimedia data mining (pp. 1--8). New York, NY, USA: ACM. \\
+				Retrieved from \texttt{http://doi.acm.org/10.1145/2237827.2237828}\\
+				doi: \texttt{10.1145/2237827.2237828}
+
+				\item Ksentini, N., \textbf{Zarka, M.}, Ammar, A. B., \&{} Alimi, A. M. (2012). 
+				Toward an assisted context based collaborative annotation. In P. Lambert (Ed.), 
+				\emph{10th international workshop on content-based multimedia indexing, 
+				CBMI 2012, Annecy, France, June 27--29, 2012} (pp. 71--76). IEEE.\\
+				Retrieved from \texttt{http://dx.doi.org/10.1109/CBMI.2012.6269852}\\
+				doi: \texttt{10.1109/CBMI.2012.6269852}
+			\end{itemize}
+		\paragraph{International Benchmarks}
+			\begin{itemize}
+				\item Elleuch, N., \textbf{Zarka, M.}, Feki, I., Ammar, A. B., 
+				\&{} Alimi, A. M. (2010). REGIMVID at TRECVID2010: semantic 
+				indexing. In P. Over et al. (Eds.), \emph{TRECVID 2010 workshop
+				participants notebook papers, Gaithersburg, MD, USA, November 2010}. 
+				National Institute of Standards and Technology (NIST). \\
+				Retrieved from \\\texttt{http://www-nlpir.nist.gov/projects/tvpubs/tv10.papers/regim.pdf}
+
+				\item \textbf{Zarka, M.}, Ben Ammar, A., \&{} Alimi, A. (2015). 
+				Regimvid at imageclef 2015 scalable concept image annotation 
+				task: Ontology based hierarchical image annotation. 
+				In \emph{Working notes for CLEF 2015 conference , 
+				Toulouse, France, September 8--11, 2015.}
+			\end{itemize}
+
+

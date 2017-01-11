@@ -1,0 +1,145 @@
+\chapter{Conclusions and Perspectives}
+\label{conlusion}
+
+	The general framework of this dissertation is video information retrieval. 
+	The main tackled challenge is how to enable a user to easily access and interpret 
+	video contents. Particularly, our thesis works are focused on a contextual 
+	concept-based video indexing that represents a motivating solution to such a challenge. 
+	The major inherent difficulty in this task is the semantic gap: what separates the signal
+	representation from semantics (concept, contexts and relationships).
+
+	In multimedia indexing and retrieval literature, the multimedia community primarily focused
+	on concept model building through a supervised learning technique that analyzes the extracted 
+	low-level features: representative features vectors are extracted from a set of representative 
+	manually annotated data (commonly images), then used  for a supervised learning algorithm in order 
+	to approach the semantic interpretation. Nevertheless, such an approach partially solved the semantic gap 
+	problem: it is difficult to detect efficiently a variety of concepts, and still unable to detect 
+	implicit objects (semantic concepts that do not figure in the content, or that \revAnglais{cannot} be easily 
+	detected). On the one hand, such issues are induced by the large variety of semantics that could be handled, 
+	on the other hand, the inability of these approaches taking into consideration semantic concept relationships.
+	Thus, recent research works are focusing on using ontologies for multimedia retrieval in order
+	to allow semantic interpretation and reasoning over extracted descriptions. However, much
+	remains to be done in order to achieve less human aid ontology modeling approaches.
+
+	\section{Summary of Contributions}
+
+	Our thesis work proposed a generic and scalable fuzzy knowledge based framework to enhance 
+	concept-based multimedia indexing. In this context, our contributions aim to improve the accuracy, 
+	the scalability and the generalization capability of our semantic video indexing system: \textsc{RegimVid}. 
+	These novelties are enumerated as follows: 
+	(1) a new knowledge based model for multimedia indexing. 
+	The objective is to develop a framework able to handle various information about a multimedia content, 
+	then to operate with \revAnglais{this} information in order to infer new information/knowledge through a reasoning process. 
+	Such a novel model has to define and highlight pertinent components for an efficient knowledge based indexing process.
+	(2) an ontology based framework to handle fuzzy knowledge and reason with semantic interpretations 
+	in order to enhance and enrich them. This objective aims to define a semantic structure to model 
+	required knowledge, then to specify an automated ontology population from available annotated 
+	image/video datasets, and finally to handle ontology content evolving to further improve 
+	semantics capabilities through \revAnglais{analyzing} and revising inaccurate and irrelevant knowledge.
+	(3) an approach for an automatic multimedia indexing by the use of an ontology-based semantic 
+	hierarchy handled at both learning and annotation steps. 
+
+	While recent works focused on the use of semantic hierarchies to improve concept detector accuracy, 
+	this objective means the use of such hierarchies to reduce detector complexity and then, to handle 
+	efficiently large-scale multimedia datasets.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\section{Future Research Directions}
+	Many approaches were proposed in this dissertation in order to deal with video indexing 
+	issues. Indeed, the semantic gap problem remains an open problem and could not be solved in 
+	the near future. Therefore, research works on video indexing are witnessing an incremental
+	improvement, and many supplementary efforts are still needed.
+
+	In the following, we discuss some potential future directions that could be explored further over 
+	the described achievements throughout this dissertation.
+
+\begin{description}
+	\item[Fuzzy Similarities]   Defining ontologies content was based on computing similarities 
+		between concepts granted by a large annotated images dataset. Although we used the 
+		statistical \emph{cosine} similarity function, more advanced fuzzy similarity 
+		functions \citep{Baccour2013,Baccour2014} could be addressed in order to handle real 
+		fuzzy knowledge to be inserted in proposed ontologies.
+% 	\item[]    The ontology evolving approach proposed for our fuzzy ontology-based 
+% 		system is quite preliminary. However, ontology evolving evaluation showed promising 
+% 		results and proved that such an ontology revision should lead to a more pertinent 
+% 		knowledge, then a better semantic interpretation enhancement. 
+% 		Thus, we consider that extensive research works on 
+% 		the ontology evolving part of our proposed approach should be more tackled.
+	\item[Video genre]   We proposed a \revAnglais{knowledge} structure that enhances the accuracy of a semantic \revAnglais{interpretation}.
+		Nevertheless, when analyzing a video annotated dataset, all videos are handled as if they were addressing the same subject. 
+		Furthermore, the videos can be classified according to their genres. Thus, the relationships between 
+		concepts/contexts can differ from one genre to another, and \revAnglais{subsequently}, from one video to another.
+		In literature, the video classification is well-addressed 
+		(\citep{Wu2012, Huang2012, Chattopadhyay2013, Muneesawang2014} to cite a few). 
+		We are convinced that addressing the video genre as a semantic information can 
+		further refine the extracted fuzzy relationships, and consequently, the video semantic 
+		interpretation enhancement. Thus, we consider that it could be an interesting task that 
+		should be followed for a future work. 
+	\item[Big data video analysis ] 
+		\revKarray{Many research works considers deep neural networks as a powerful
+		 framework for big data video repositories
+		 \citep{Girshick2014,Jiang2015,Sainath2015,Tong2015}. 
+		 In \citep{Wu2015,Druzhkov2016}, a comprehensive survey on deep learning
+		 and neural networks based approaches for video analysis and indexing is discussed.
+		 The effectiveness  of such approaches resides in exploring parallel processing 
+		 units (such as \textsc{Cuda} based machines \citep{Osipyan2015}) to run the 
+		 neural networks pipelines. However, and as discussed in section 3.4, we are 
+		 focusing more in our thesis work on a knowledge-based approach rather than 
+		 a parallel one. }
+		 
+		 \revKarray{As a third contribution (discussed in chapter 6), we showed that a knowledge-based 
+		 approach could reduce the computing cost of semantic concept detectors. 
+		 But, we believe that this contribution should 
+		 be extended to deep neural networks in order to achieve robust and real time 
+		 multimedia content analysis.   }	
+	
+	\item[Domain Adaptation and Ontology evolving] 
+		\revKarray{Ontology evolving is an important step in an ontology construction. 
+		In fact, this step ensures not only the accuracy of the managed knowledge, but leads also to a continuous 
+		adaptation of an ontology to a variety of application domains. The latter is based on the use of particular 
+		approaches for constructing a discriminative model within a shift between observed data (training) and 
+		analyzed one (test). Such a situation is widely discussed particularly when dealing with big data where 
+		information is diverse and heterogeneous, and defined as \textit{domain adaptation} \citep{Pan2010}. 
+		Many approaches were discussed in literature for the domain adaptation mainly by bridging the learned 
+		(observed) and target (analyzed) domains by learning domain invariant features : the classifier learned 
+		from observed domain can then be applied to the target domain \citep{Long2016}.}
+
+		\revKarray{Recent studies are focusing particularly on deep neural networks to handle invariant features for domain 
+		adaptation \citep{Donahue2014,Yosinski2014,Kumar2016}. Indeed, the domain adaptation is embedded in the pipeline 
+		of deep feature learning in order to extract domain invariant representation 
+		\citep{Tzeng2014,Long2015}.}
+
+		\revKarray{In multimedia analysis, the domain adaptation leads to alleviate manual construction of 
+		labeled data, and to enhance the ability to handle extended domains 
+		\citep{Saenko2010,Gopalan2011,Gong2012,Duan2012a,Hoffman2014,Liu2016}. 
+		Some recent works addressed the domain adaptation with more focus on deep neural networks 
+		\citep{Ganin2015,Tzeng2015}.}
+
+		\revKarray{Thus, the domain adaptation is an interesting research direction that should be tackled when 
+		dealing with ontology population and evolving. In the present dissertation, we  opted to 
+		use classical approaches to extract and evolve the content of an ontology. Thereby, 
+		we believe that such a research direction will be highly considered as a future work.}
+
+\end{description}
+
+%	 \section{Future Development Directions}
+%
+%	\revKarray{As discussed in the previous section, the research presented in this dissertation 
+%	leaves many promising avenues open for future research. This section looks at some 
+%	of the future directions in the development of the multimedia retrieval systems.}
+%
+%	\revKarray{As hand-held and mobile devices are becoming common, the proposed framework to enhance
+%	a semantic interpretation and to alleviate the complexity of semantic concept detection could 
+%	be integrated within these devices. In fact, the use of semantic hierarchies to improve concept
+%	detector accuracy could not only to handle efficiently large-scale multimedia contents, 
+%	but also to enable efficient visual indexing with limited power and memory devices. 
+%	Then, the semantic enhancement could enrich and improve incomplete semantic interpretation
+%	using the ontology's deduction capabilities.}
+%
+%	\revKarray{For such a purpose, the proposed framework needs to be optimized so that it can be processed
+%	with less power and memory capabilities.}
+
+	
+
+
